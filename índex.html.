@@ -1,1 +1,644 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>rsgames</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20%3E%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23ff5c92%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%236a3df0%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%231fc8a8%22%2F%3E%3C%2FlinearGradient%3E%0A%3ClinearGradient%20id%3D%22c%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23ffe27a%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f5a300%22%2F%3E%3C%2FlinearGradient%3E%0A%3CclipPath%20id%3D%22r%22%3E%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2230%22%2F%3E%3C%2FclipPath%3E%0A%3C%2Fdefs%3E%3Cg%20clip-path%3D%22url%28%23r%29%22%3E%3Crect%20width%3D%22128%22%20height%3D%22128%22%20fill%3D%22url%28%23g%29%22%2F%3E%3Cellipse%20cx%3D%2240%22%20cy%3D%228%22%20rx%3D%2280%22%20ry%3D%2234%22%20fill%3D%22%23fff%22%20opacity%3D%22.1%22%2F%3E%3C%2Fg%3E%0A%3Cpath%20d%3D%22M30%2058C30%2050%2036%2046%2044%2046H84C92%2046%2098%2050%2098%2058L104%2088C106%2098%2096%20104%2088%2098L78%2090H50L40%2098C32%20104%2022%2098%2024%2088Z%22%20fill%3D%22%2314122b%22%20opacity%3D%22.25%22%20transform%3D%22translate%280%204%29%22%2F%3E%0A%3Cpath%20d%3D%22M30%2058C30%2050%2036%2046%2044%2046H84C92%2046%2098%2050%2098%2058L104%2088C106%2098%2096%20104%2088%2098L78%2090H50L40%2098C32%20104%2022%2098%2024%2088Z%22%20fill%3D%22%23fff%22%2F%3E%0A%3Crect%20x%3D%2238%22%20y%3D%2264%22%20width%3D%2218%22%20height%3D%226%22%20rx%3D%222%22%20fill%3D%22%236a3df0%22%2F%3E%3Crect%20x%3D%2244%22%20y%3D%2258%22%20width%3D%226%22%20height%3D%2218%22%20rx%3D%222%22%20fill%3D%22%236a3df0%22%2F%3E%0A%3Ccircle%20cx%3D%2280%22%20cy%3D%2262%22%20r%3D%224.5%22%20fill%3D%22%23ff5c92%22%2F%3E%3Ccircle%20cx%3D%2290%22%20cy%3D%2270%22%20r%3D%224.5%22%20fill%3D%22%231fc8a8%22%2F%3E%0A%3Ccircle%20cx%3D%2296%22%20cy%3D%2232%22%20r%3D%2218%22%20fill%3D%22url%28%23c%29%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223.5%22%2F%3E%3Ccircle%20cx%3D%2296%22%20cy%3D%2232%22%20r%3D%2211%22%20fill%3D%22none%22%20stroke%3D%22%23c77f00%22%20stroke-width%3D%222%22%20opacity%3D%22.8%22%2F%3E%0A%3Cpolygon%20points%3D%2296%2C24%20103%2C32%2096%2C40%2089%2C32%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="intro" role="status" aria-live="polite"><span class="sp" style="left:14%;top:22%">🎮</span><span class="sp" style="right:15%;top:30%;animation-delay:.6s">🪙</span><span class="sp" style="left:20%;bottom:22%;animation-delay:1.2s">💎</span><span class="sp" style="right:18%;bottom:26%;animation-delay:.3s">🏆</span><div class="in"><div id="introMark"></div><div class="wm"><span>rs</span>games</div><div class="ld"><i></i></div><p>Carregando…</p></div></div>
+<div id="fx" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i></div>
+<header class="top"><div class="wrap top-in">
+<a class="brand" href="#inicio" aria-label="rsgames, início"><svg class="mark" viewBox="0 0 128 128" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5c92"/><stop offset=".55" stop-color="#6a3df0"/><stop offset="1" stop-color="#1fc8a8"/></linearGradient><linearGradient id="lc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe27a"/><stop offset="1" stop-color="#f5a300"/></linearGradient><clipPath id="lr"><rect width="128" height="128" rx="30"/></clipPath></defs><g clip-path="url(#lr)"><rect width="128" height="128" fill="url(#lg)"/><ellipse cx="40" cy="8" rx="80" ry="34" fill="#fff" opacity=".1"/></g><path d="M30 58C30 50 36 46 44 46H84C92 46 98 50 98 58L104 88C106 98 96 104 88 98L78 90H50L40 98C32 104 22 98 24 88Z" fill="#14122b" opacity=".25" transform="translate(0 4)"/><path d="M30 58C30 50 36 46 44 46H84C92 46 98 50 98 58L104 88C106 98 96 104 88 98L78 90H50L40 98C32 104 22 98 24 88Z" fill="#fff"/><rect x="38" y="64" width="18" height="6" rx="2" fill="#6a3df0"/><rect x="44" y="58" width="6" height="18" rx="2" fill="#6a3df0"/><circle cx="80" cy="62" r="4.5" fill="#ff5c92"/><circle cx="90" cy="70" r="4.5" fill="#1fc8a8"/><circle cx="96" cy="32" r="18" fill="url(#lc)" stroke="#fff" stroke-width="3.5"/><circle cx="96" cy="32" r="11" fill="none" stroke="#c77f00" stroke-width="2" opacity=".8"/><polygon points="96,24 103,32 96,40 89,32" fill="#fff"/></svg><span>rs</span>games</a>
+<nav class="tabs" id="tabs" aria-label="Seções"></nav>
+<div class="acts"><div class="coins" id="coins" aria-live="polite"></div><button class="icon-btn" id="btn-mus" type="button" aria-label="Música" title="Música">🎵</button><button class="btn primary" id="btn-post" type="button">Postar</button></div>
+</div></header>
+<main id="view" tabindex="-1"></main>
+<div id="ov"></div>
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>rsgames</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20128%20128%22%20%3E%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23ff5c92%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%236a3df0%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%231fc8a8%22%2F%3E%3C%2FlinearGradient%3E%0A%3ClinearGradient%20id%3D%22c%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23ffe27a%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f5a300%22%2F%3E%3C%2FlinearGradient%3E%0A%3CclipPath%20id%3D%22r%22%3E%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2230%22%2F%3E%3C%2FclipPath%3E%0A%3C%2Fdefs%3E%3Cg%20clip-path%3D%22url%28%23r%29%22%3E%3Crect%20width%3D%22128%22%20height%3D%22128%22%20fill%3D%22url%28%23g%29%22%2F%3E%3Cellipse%20cx%3D%2240%22%20cy%3D%228%22%20rx%3D%2280%22%20ry%3D%2234%22%20fill%3D%22%23fff%22%20opacity%3D%22.1%22%2F%3E%3C%2Fg%3E%0A%3Cpath%20d%3D%22M30%2058C30%2050%2036%2046%2044%2046H84C92%2046%2098%2050%2098%2058L104%2088C106%2098%2096%20104%2088%2098L78%2090H50L40%2098C32%20104%2022%2098%2024%2088Z%22%20fill%3D%22%2314122b%22%20opacity%3D%22.25%22%20transform%3D%22translate%280%204%29%22%2F%3E%0A%3Cpath%20d%3D%22M30%2058C30%2050%2036%2046%2044%2046H84C92%2046%2098%2050%2098%2058L104%2088C106%2098%2096%20104%2088%2098L78%2090H50L40%2098C32%20104%2022%2098%2024%2088Z%22%20fill%3D%22%23fff%22%2F%3E%0A%3Crect%20x%3D%2238%22%20y%3D%2264%22%20width%3D%2218%22%20height%3D%226%22%20rx%3D%222%22%20fill%3D%22%236a3df0%22%2F%3E%3Crect%20x%3D%2244%22%20y%3D%2258%22%20width%3D%226%22%20height%3D%2218%22%20rx%3D%222%22%20fill%3D%22%236a3df0%22%2F%3E%0A%3Ccircle%20cx%3D%2280%22%20cy%3D%2262%22%20r%3D%224.5%22%20fill%3D%22%23ff5c92%22%2F%3E%3Ccircle%20cx%3D%2290%22%20cy%3D%2270%22%20r%3D%224.5%22%20fill%3D%22%231fc8a8%22%2F%3E%0A%3Ccircle%20cx%3D%2296%22%20cy%3D%2232%22%20r%3D%2218%22%20fill%3D%22url%28%23c%29%22%20stroke%3D%22%23fff%22%20stroke-width%3D%223.5%22%2F%3E%3Ccircle%20cx%3D%2296%22%20cy%3D%2232%22%20r%3D%2211%22%20fill%3D%22none%22%20stroke%3D%22%23c77f00%22%20stroke-width%3D%222%22%20opacity%3D%22.8%22%2F%3E%0A%3Cpolygon%20points%3D%2296%2C24%20103%2C32%2096%2C40%2089%2C32%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="intro" role="status" aria-live="polite"><span class="sp" style="left:14%;top:22%">🎮</span><span class="sp" style="right:15%;top:30%;animation-delay:.6s">🪙</span><span class="sp" style="left:20%;bottom:22%;animation-delay:1.2s">💎</span><span class="sp" style="right:18%;bottom:26%;animation-delay:.3s">🏆</span><div class="in"><div id="introMark"></div><div class="wm"><span>rs</span>games</div><div class="ld"><i></i></div><p>Carregando…</p></div></div>
+<div id="fx" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i></div>
+<header class="top"><div class="wrap top-in">
+<a class="brand" href="#inicio" aria-label="rsgames, início"><svg class="mark" viewBox="0 0 128 128" aria-hidden="true" focusable="false"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5c92"/><stop offset=".55" stop-color="#6a3df0"/><stop offset="1" stop-color="#1fc8a8"/></linearGradient><linearGradient id="lc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe27a"/><stop offset="1" stop-color="#f5a300"/></linearGradient><clipPath id="lr"><rect width="128" height="128" rx="30"/></clipPath></defs><g clip-path="url(#lr)"><rect width="128" height="128" fill="url(#lg)"/><ellipse cx="40" cy="8" rx="80" ry="34" fill="#fff" opacity=".1"/></g><path d="M30 58C30 50 36 46 44 46H84C92 46 98 50 98 58L104 88C106 98 96 104 88 98L78 90H50L40 98C32 104 22 98 24 88Z" fill="#14122b" opacity=".25" transform="translate(0 4)"/><path d="M30 58C30 50 36 46 44 46H84C92 46 98 50 98 58L104 88C106 98 96 104 88 98L78 90H50L40 98C32 104 22 98 24 88Z" fill="#fff"/><rect x="38" y="64" width="18" height="6" rx="2" fill="#6a3df0"/><rect x="44" y="58" width="6" height="18" rx="2" fill="#6a3df0"/><circle cx="80" cy="62" r="4.5" fill="#ff5c92"/><circle cx="90" cy="70" r="4.5" fill="#1fc8a8"/><circle cx="96" cy="32" r="18" fill="url(#lc)" stroke="#fff" stroke-width="3.5"/><circle cx="96" cy="32" r="11" fill="none" stroke="#c77f00" stroke-width="2" opacity=".8"/><polygon points="96,24 103,32 96,40 89,32" fill="#fff"/></svg><span>rs</span>games</a>
+<nav class="tabs" id="tabs" aria-label="Seções"></nav>
+<div class="acts"><div class="coins" id="coins" aria-live="polite"></div><button class="icon-btn" id="btn-mus" type="button" aria-label="Música" title="Música">🎵</button><button class="btn primary" id="btn-post" type="button">Postar</button></div>
+</div></header>
+<main id="view" tabindex="-1"></main>
+<div id="ov"></div>
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
+(function(){
+'use strict';
+var ROUTES=['inicio','jogos','videos','perfil','loja','recompensas','config'];
+var LABEL={inicio:'Início',jogos:'Jogos',videos:'Vídeos',perfil:'Perfil',loja:'Loja',recompensas:'Recompensas',config:'Config'};
+var KINDS={curto:'Curto',medio:'Médio',longo:'Longo'};
+var KHINT={curto:'Pequenininho, tipo short (até cerca de 1 min)',medio:'De 30 segundos até 5 minutos ou mais',longo:'Comprido, tipo filme'};
+var PARTS=[['inicio','Início'],['meio','Meio'],['fim','Fim']];
+var DAILY=[200,300,400,500,700,900,1500];
+var VTYPES=['video/mp4','video/webm','video/quicktime'],ITYPES=['image/png','image/jpeg','image/webp','image/gif'];
+var SHOP={
+title:[{id:'novato',name:'Novato',price:0},{id:'criador',name:'Criador',price:2500},{id:'jogador',name:'Jogador Pro',price:4000},{id:'cineasta',name:'Cineasta',price:6000},{id:'estrela',name:'Estrela da Casa',price:10000},{id:'mestre',name:'Mestre dos Jogos',price:18000},{id:'lenda',name:'Lenda RS',price:40000},{id:'imperador',name:'Imperador RS',price:100000},{id:'diamante',name:'Diamante',price:0,gem:30}],
+color:[{id:'padrao',name:'Padrão',price:0,css:'color:var(--fg)'},{id:'coral',name:'Coral',price:2500,css:'color:var(--accent)'},{id:'menta',name:'Menta',price:2500,css:'color:var(--accent2)'},{id:'azul',name:'Azul',price:3500,css:'color:#3d8bff'},{id:'ouro',name:'Ouro',price:8000,css:'color:var(--coin)'},{id:'rosa',name:'Rosa neon',price:12000,css:'color:#ff4fd8'},{id:'aurora',name:'Aurora',price:30000,css:'background:linear-gradient(90deg,var(--accent),var(--violet),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent'},{id:'cristal',name:'Cristal',price:0,gem:40,css:'background:linear-gradient(90deg,#7df9ff,#a58bff,#ff5c92);-webkit-background-clip:text;background-clip:text;color:transparent'}],
+frame:[{id:'nenhuma',name:'Sem moldura',price:0,css:'border:3px solid var(--line)'},{id:'coral',name:'Moldura coral',price:2500,css:'border:3px solid var(--accent)'},{id:'menta',name:'Moldura menta',price:2500,css:'border:3px solid var(--accent2)'},{id:'ouro',name:'Moldura ouro',price:8000,css:'border:3px solid var(--coin-bg);box-shadow:0 0 14px var(--coin-bg)'},{id:'neon',name:'Moldura neon',price:20000,css:'border:3px solid var(--violet);box-shadow:0 0 18px var(--violet),0 0 6px var(--accent)'},{id:'fogo',name:'Moldura de fogo',price:50000,css:'border:3px solid #ff7a1a;box-shadow:0 0 18px #ff7a1a'},{id:'diamante',name:'Moldura diamante',price:0,gem:60,css:'border:3px solid #7df9ff;box-shadow:0 0 18px #7df9ff,0 0 6px #fff'}],
+banner:[{id:'liso',name:'Fundo liso',price:0,css:'background:var(--surface2)'},{id:'por',name:'Pôr do sol',price:3000,css:'background:linear-gradient(135deg,var(--accent),var(--coin-bg))'},{id:'mar',name:'Mar',price:3000,css:'background:linear-gradient(135deg,var(--accent2),var(--violet))'},{id:'galaxia',name:'Galáxia',price:9000,css:'background:linear-gradient(135deg,#1b1933,var(--violet) 60%,var(--accent))'},{id:'boreal',name:'Aurora boreal',price:25000,css:'background:linear-gradient(135deg,#0b3d4a,#2bd9a5 55%,#6a3df0)'},{id:'lava',name:'Lava',price:60000,css:'background:linear-gradient(135deg,#3a0a0a,#ff4d2e 60%,#ffd35e)'},{id:'cosmos',name:'Cosmos',price:0,gem:80,css:'background:radial-gradient(circle at 30% 30%,#ff5c92,#6a3df0 45%,#0e0e1b)'}],
+avatar:[{id:'🎮',name:'Controle',price:0},{id:'🦊',name:'Raposa',price:2500},{id:'🐲',name:'Dragão',price:4000},{id:'🚀',name:'Foguete',price:5000},{id:'👑',name:'Coroa',price:12000},{id:'🦄',name:'Unicórnio',price:20000},{id:'🔥',name:'Chama',price:30000},{id:'🏆',name:'Troféu',price:100000},{id:'👽',name:'Alienígena',price:0,gem:25},{id:'💎',name:'Diamante',price:0,gem:50}]
+};
+var KLABEL={title:'Título',color:'Cor do nome',frame:'Moldura',banner:'Fundo do perfil',avatar:'Avatar'};
+var KPLURAL={title:'Títulos',color:'Cores',frame:'Molduras',banner:'Fundos',avatar:'Avatares'};
+var MISSIONS=[
+{id:'open',label:'Abra 3 jogos ou vídeos',target:3,reward:400,get:function(m){return m.openIds.length;}},
+{id:'like',label:'Curta 3 publicações diferentes',target:3,reward:300,get:function(m){return m.likedIds.length;}},
+{id:'play10',label:'Jogue por 10 minutos',target:10,reward:800,get:function(m){return Math.floor((m.ps||0)/60);}},
+{id:'post',label:'Poste um jogo ou um vídeo',target:1,reward:1500,gem:1,get:function(m){return m.posted;}},
+{id:'play30',label:'Jogue por 30 minutos',target:30,reward:2500,gem:1,get:function(m){return Math.floor((m.ps||0)/60);}}];
+var PLATFORMS=[{id:'youtube',name:'YouTube',re:/(^|\.)(youtube\.com|youtu\.be)$/},{id:'instagram',name:'Instagram',re:/(^|\.)instagram\.com$/},{id:'tiktok',name:'TikTok',re:/(^|\.)tiktok\.com$/},{id:'snapchat',name:'Snapchat',re:/(^|\.)snapchat\.com$/}];
+var LS='rsgames.wallet.v2';
+var LANGS={pt:'Português',en:'English',es:'Español'},LOC={pt:'pt-BR',en:'en-US',es:'es-ES'};
+var S={route:'inicio',posts:[],likes:new Map(),profiles:{},names:{},uid:null,user:null,db:null,assets:null,isAdmin:false,isOwner:false,canWrite:null,wallet:null,initDone:false,postsReady:false,postsErr:'',lastFocus:null,q:'',sort:'recent',kf:'all',sc:'all',cfg:null,views:new Map(),lastPost:0,pn:{},cc:{}};
+function pad(n){return String(n).padStart(2,'0');}
+function dayKey(o){var d=new Date();d.setDate(d.getDate()+(o||0));return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+function freshM(){return {openIds:[],posted:0,claimed:[],likedIds:[],ps:0};}
+function num(v){return Math.min(1e9,Math.max(0,Math.floor(Number(v)||0)));}
+var DEF_EQ={title:'novato',color:'padrao',frame:'nenhuma',banner:'liso',avatar:'🎮'};
+function normalize(w){
+var o=Object.assign({coins:0,gems:0,gsec:0,xp:0,owned:[],streak:0,lastDaily:'',bio:'',day:dayKey(0)},w||{});
+o.equip=Object.assign({},DEF_EQ,(w&&w.equip)||{});
+o.m=Object.assign(freshM(),(w&&w.m)||{});
+['owned'].forEach(function(k){if(!Array.isArray(o[k]))o[k]=[];o[k]=o[k].slice();});
+['claimed','likedIds','openIds'].forEach(function(k){if(!Array.isArray(o.m[k]))o.m[k]=[];o.m[k]=o.m[k].slice();});
+if(o.day!==dayKey(0)){o.day=dayKey(0);o.m=freshM();}
+o.coins=num(o.coins);o.gems=num(o.gems);o.gsec=num(o.gsec);o.m.ps=num(o.m.ps);o.xp=num(o.xp);o.streak=num(o.streak);o.m.posted=num(o.m.posted);
+o.bio=String(o.bio||'').slice(0,160);
+return o;}
+S.wallet=normalize(null);
+/* configurações, idiomas, acessos e proteção da carteira */
+function loadCfg(){var c={lang:'',theme:'auto',size:'m',calm:false,toasts:true,music:true,vol:50,sfx:true};try{Object.assign(c,JSON.parse(localStorage.getItem('rsgames.cfg')||'{}'));}catch(e){}
+if(!LANGS[c.lang]){var n=String(navigator.language||'pt').slice(0,2).toLowerCase();c.lang=LANGS[n]?n:'pt';}return c;}
+S.cfg=loadCfg();
+function applyCfg(){var c=S.cfg,r=document.documentElement;r.lang=LOC[c.lang];if(c.theme==='auto')r.removeAttribute('data-theme');else r.setAttribute('data-theme',c.theme);
+document.body.style.fontSize={s:'13px',m:'15px',l:'17px'}[c.size]||'15px';r.classList.toggle('calm',!!c.calm);musicIcon();}
+function saveCfg(){try{localStorage.setItem('rsgames.cfg',JSON.stringify(S.cfg));}catch(e){}applyCfg();}
+function resetChrome(){var t=document.getElementById('tabs');t.replaceChildren();t.setAttribute('aria-label','Seções');document.getElementById('btn-post').textContent='Postar';var bm=document.getElementById('btn-mus');bm.setAttribute('aria-label','Música');bm.setAttribute('title','Música');document.querySelector('.brand').setAttribute('aria-label','rsgames, início');}
+function setLang(v){if(!LANGS[v])return;S.cfg.lang=v;saveCfg();resetChrome();render();}
+function sign(w){var t='rsg|'+S.uid+'|'+w.coins+'|'+w.gems+'|'+w.xp+'|'+w.streak+'|'+w.lastDaily+'|'+(w.owned||[]).join(',')+'|k9x';var a=0xdeadbeef,b=0x41c6ce57,i,c;
+for(i=0;i<t.length;i++){c=t.charCodeAt(i);a=Math.imul(a^c,2654435761);b=Math.imul(b^c,1597334677);}
+a=Math.imul(a^(a>>>16),2246822507)^Math.imul(b^(b>>>13),3266489909);b=Math.imul(b^(b>>>16),2246822507)^Math.imul(a^(a>>>13),3266489909);
+return (4294967296*(2097151&b)+(a>>>0)).toString(36);}
+function checked(d){var n=normalize(d);if(S.isOwner)return n;var legacy=!d.sig&&n.coins<=5000&&n.gems<=5;if(legacy||d.sig===sign(n))return n;toast('Dados alterados fora do site. Carteira restaurada.');return normalize(null);}
+function viewsOf(id){var x=S.views.get(id);return x?x.size:0;}
+function viewTotal(uid){var n=0;S.posts.forEach(function(p){if(p.authorId===uid)n+=viewsOf(p.id);});return n;}
+function trackView(p){if(!S.db||!S.uid||p.authorId===S.uid)return;var x=S.views.get(p.id);if(x&&x.has(S.uid))return;try{S.db.collection('views').doc(p.id+'_'+S.uid).set({postId:p.id,uid:S.uid,t:Date.now()}).catch(function(){});}catch(e){}}
 
+
+/* proteção do código dos jogos: criptografia no banco + trava de cópia na tela do jogo */
+var KEYSEED='rsg·k7#Pq2·v1',CRY=!!(window.crypto&&window.crypto.subtle);
+async function ckey(salt){var e=new TextEncoder(),b=await crypto.subtle.importKey('raw',e.encode(KEYSEED),'PBKDF2',false,['deriveKey']);
+return crypto.subtle.deriveKey({name:'PBKDF2',salt:e.encode(String(salt)),iterations:20000,hash:'SHA-256'},b,{name:'AES-GCM',length:256},false,['encrypt','decrypt']);}
+function b64(u){var t='',i;for(i=0;i<u.length;i+=8192)t+=String.fromCharCode.apply(null,u.subarray(i,i+8192));return btoa(t);}
+function unb64(t){var a=atob(t),u=new Uint8Array(a.length),i;for(i=0;i<a.length;i++)u[i]=a.charCodeAt(i);return u;}
+async function encCode(text,salt){var iv=crypto.getRandomValues(new Uint8Array(12)),k=await ckey(salt),ct=new Uint8Array(await crypto.subtle.encrypt({name:'AES-GCM',iv:iv},k,new TextEncoder().encode(text))),o=new Uint8Array(12+ct.length);o.set(iv);o.set(ct,12);return b64(o);}
+async function decCode(t,salt){var u=unb64(t),k=await ckey(salt);return new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:u.subarray(0,12)},k,u.subarray(12)));}
+var GUARD='<style>*{-webkit-touch-callout:none}*:not(input):not(textarea){-webkit-user-select:none;user-select:none}input,textarea,[contenteditable=true]{-webkit-user-select:text;user-select:text}</style><script>["contextmenu","copy","cut","dragstart","selectstart"].forEach(function(e){addEventListener(e,function(v){var t=v.target;if(e==="selectstart"&&t&&/^(INPUT|TEXTAREA)$/.test(t.tagName))return;v.preventDefault();},true);});addEventListener("keydown",function(v){var k=(v.key||"").toLowerCase();if((v.ctrlKey||v.metaKey)&&k.length===1&&"suspc".indexOf(k)>=0)v.preventDefault();},true);<\/script>';
+function guard(code){code=String(code||'');var m=/<head[^>]*>/i.exec(code)||/<html[^>]*>/i.exec(code)||/<!doctype[^>]*>/i.exec(code);if(m){var i=m.index+m[0].length;return code.slice(0,i)+GUARD+code.slice(i);}return GUARD+code;}
+var DICT={en:{},es:{}};
+(function(){var L=[
+['Postar','Post','Publicar'],['Jogo','Game','Juego'],['Criadores','Creators','Creadores'],['Publicações','Posts','Publicaciones'],['Suas publicações','Your posts','Tus publicaciones'],['Ainda não publicou nada.','Nothing posted yet.','Aún no ha publicado nada.'],['Carregando…','Loading…','Cargando…'],['Música','Music','Música'],['Som','Sound','Sonido'],['Música de fundo','Background music','Música de fondo'],['Volume','Volume','Volumen'],['Efeitos sonoros','Sound effects','Efectos de sonido'],['NOVO','NEW','NUEVO'],['🔥 EM ALTA','🔥 TRENDING','🔥 EN ALZA'],['Seções','Sections','Secciones'],['rsgames, início','rsgames, home','rsgames, inicio'],
+['Início','Home','Inicio'],['Jogos','Games','Juegos'],['Vídeos','Videos','Vídeos'],['Perfil','Profile','Perfil'],['Loja','Shop','Tienda'],['Recompensas','Rewards','Recompensas'],['Config','Settings','Ajustes'],
+['Curto','Short','Corto'],['Médio','Medium','Medio'],['Longo','Long','Largo'],['Curtos','Short','Cortos'],['Médios','Medium','Medios'],['Longos','Long','Largos'],['Todos','All','Todos'],
+['Meio','Middle','Medio'],['Fim','End','Fin'],
+['Pequenininho, tipo short (até cerca de 1 min). Grave na hora, tire fotos ou escolha da galeria. Tudo toca em ordem, do início ao fim.','Tiny, like a short (up to about 1 min). Record on the spot, take photos or pick from your gallery. Everything plays in order, from start to end.','Pequeño, tipo short (hasta 1 min aprox.). Graba al momento, toma fotos o elige de la galería. Todo se reproduce en orden, del inicio al final.'],
+['De 30 segundos até 5 minutos ou mais. Grave na hora, tire fotos ou escolha da galeria. Tudo toca em ordem, do início ao fim.','From 30 seconds to 5 minutes or more. Record on the spot, take photos or pick from your gallery. Everything plays in order, from start to end.','De 30 segundos a 5 minutos o más. Graba al momento, toma fotos o elige de la galería. Todo se reproduce en orden, del inicio al final.'],
+['Comprido, tipo filme. Grave na hora, tire fotos ou escolha da galeria. Tudo toca em ordem, do início ao fim.','Long, like a movie. Record on the spot, take photos or pick from your gallery. Everything plays in order, from start to end.','Largo, tipo película. Graba al momento, toma fotos o elige de la galería. Todo se reproduce en orden, del inicio al final.'],
+['Título','Title','Título'],['Cor do nome','Name color','Color del nombre'],['Moldura','Frame','Marco'],['Fundo do perfil','Profile background','Fondo del perfil'],['Avatar','Avatar','Avatar'],
+['Títulos','Titles','Títulos'],['Cores','Colors','Colores'],['Molduras','Frames','Marcos'],['Fundos','Backgrounds','Fondos'],['Avatares','Avatars','Avatares'],['💎 Raros','💎 Rare','💎 Raros'],['Categorias','Categories','Categorías'],
+['Novato','Newbie','Novato'],['Criador','Creator','Creador'],['Jogador Pro','Pro Player','Jugador Pro'],['Cineasta','Filmmaker','Cineasta'],['Estrela da Casa','House Star','Estrella de la Casa'],['Mestre dos Jogos','Game Master','Maestro de los Juegos'],['Lenda RS','RS Legend','Leyenda RS'],['Imperador RS','RS Emperor','Emperador RS'],['Diamante','Diamond','Diamante'],
+['Padrão','Default','Predeterminado'],['Menta','Mint','Menta'],['Azul','Blue','Azul'],['Ouro','Gold','Oro'],['Rosa neon','Neon pink','Rosa neón'],['Cristal','Crystal','Cristal'],
+['Sem moldura','No frame','Sin marco'],['Moldura coral','Coral frame','Marco coral'],['Moldura menta','Mint frame','Marco menta'],['Moldura ouro','Gold frame','Marco dorado'],['Moldura neon','Neon frame','Marco neón'],['Moldura de fogo','Fire frame','Marco de fuego'],['Moldura diamante','Diamond frame','Marco diamante'],
+['Fundo liso','Plain background','Fondo liso'],['Pôr do sol','Sunset','Atardecer'],['Mar','Sea','Mar'],['Galáxia','Galaxy','Galaxia'],['Aurora boreal','Northern lights','Aurora boreal'],
+['Controle','Controller','Mando'],['Raposa','Fox','Zorro'],['Dragão','Dragon','Dragón'],['Foguete','Rocket','Cohete'],['Coroa','Crown','Corona'],['Unicórnio','Unicorn','Unicornio'],['Chama','Flame','Llama'],['Troféu','Trophy','Trofeo'],['Alienígena','Alien','Alienígena'],
+['Abra 3 jogos ou vídeos','Open 3 games or videos','Abre 3 juegos o vídeos'],['Curta 3 publicações diferentes','Like 3 different posts','Dale me gusta a 3 publicaciones distintas'],['Jogue por 10 minutos','Play for 10 minutes','Juega durante 10 minutos'],['Poste um jogo ou um vídeo','Post a game or a video','Publica un juego o un vídeo'],['Jogue por 30 minutos','Play for 30 minutes','Juega durante 30 minutos'],
+['Recompensa diária','Daily reward','Recompensa diaria'],['Entre todo dia para manter a sequência. O dia 7 paga mais.','Come back every day to keep your streak. Day 7 pays the most.','Entra todos los días para mantener la racha. El día 7 paga más.'],['Volte amanhã','Come back tomorrow','Vuelve mañana'],
+['Recebido','Claimed','Reclamado'],['Missões de hoje','Today\'s missions','Misiones de hoy'],['Renovam à meia-noite','Reset at midnight','Se renuevan a medianoche'],
+['Pegue moedas todo dia, cumpra missões e gaste tudo na loja.','Grab coins every day, complete missions and spend it all in the shop.','Consigue monedas cada día, cumple misiones y gástalo todo en la tienda.'],
+['Entre com sua conta para ter um perfil online que todo mundo vê.','Sign in to have an online profile everyone can see.','Inicia sesión para tener un perfil en línea que todos pueden ver.'],
+['Sua conta aparece aqui assim que você abrir o site logado. Enquanto isso, o que você ganha fica salvo só neste navegador.','Your account shows up here as soon as you open the site signed in. Until then, what you earn is saved only in this browser.','Tu cuenta aparece aquí en cuanto abras el sitio con la sesión iniciada. Mientras tanto, lo que ganes se guarda solo en este navegador.'],
+['Seu perfil','Your profile','Tu perfil'],['É assim que os outros veem você. Compre itens na loja e use aqui.','This is how others see you. Buy items in the shop and use them here.','Así te ven los demás. Compra objetos en la tienda y úsalos aquí.'],
+['Biografia','Bio','Biografía'],['Conte algo sobre você','Tell us something about you','Cuéntanos algo sobre ti'],['Salvar biografia','Save bio','Guardar biografía'],['Ir para a loja','Go to the shop','Ir a la tienda'],['Perfil salvo.','Profile saved.','Perfil guardado.'],['Sem biografia ainda.','No bio yet.','Aún sin biografía.'],
+['Poste seu jogo. Poste seu vídeo. Ganhe','Post your game. Post your video. Earn','Publica tu juego. Publica tu vídeo. Gana'],['moedas.','coins.','monedas.'],
+['Vídeos curtos, médios e longos, montados em início, meio e fim do seu jeito. Grave na hora ou escolha da galeria. Crie seu perfil, gaste suas RS Coins na loja e personalize tudo.','Short, medium and long videos, built your way from start to middle to end. Record on the spot or pick from your gallery. Create your profile, spend your RS Coins in the shop and customize everything.','Vídeos cortos, medios y largos, armados a tu manera con inicio, medio y final. Graba al momento o elige de la galería. Crea tu perfil, gasta tus RS Coins en la tienda y personaliza todo.'],
+['Postar agora','Post now','Publicar ahora'],['Ver vídeos','Watch videos','Ver vídeos'],['jogos','games','juegos'],['vídeos','videos','vídeos'],['perfis','profiles','perfiles'],['curtidas','likes','me gusta'],
+['Novidades da comunidade','Community highlights','Novedades de la comunidad'],['Ainda não tem nada por aqui. Poste o primeiro jogo ou vídeo.','Nothing here yet. Post the first game or video.','Aún no hay nada por aquí. Publica el primer juego o vídeo.'],
+['Jogos que a comunidade postou. Abra, jogue e curta.','Games posted by the community. Open them, play and like.','Juegos publicados por la comunidad. Ábrelos, juega y da me gusta.'],['Curtos, médios e longos. Cada vídeo pode ter início, meio e fim com várias partes.','Short, medium and long. Each video can have a start, middle and end with several parts.','Cortos, medios y largos. Cada vídeo puede tener inicio, medio y final con varias partes.'],
+['Vídeos da galera','Community videos','Vídeos de la comunidad'],['Jogos da galera','Community games','Juegos de la comunidad'],['Postar vídeo','Post video','Publicar vídeo'],['Postar jogo','Post game','Publicar juego'],['Buscar vídeos','Search videos','Buscar vídeos'],['Buscar jogos','Search games','Buscar juegos'],['Buscar','Search','Buscar'],
+['Ordenar por','Sort by','Ordenar por'],['Mais recentes','Most recent','Más recientes'],['Mais curtidos','Most liked','Más gustados'],['Mais vistos','Most viewed','Más vistos'],['Tipo de vídeo','Video type','Tipo de vídeo'],
+['Nenhum vídeo postado ainda. Mande o primeiro.','No videos posted yet. Send the first one.','Aún no hay vídeos. Envía el primero.'],['Nenhum jogo postado ainda. Que tal ser o primeiro?','No games posted yet. Why not be the first?','Aún no hay juegos. ¿Por qué no ser el primero?'],['Postar um vídeo','Post a video','Publicar un vídeo'],['Postar um jogo','Post a game','Publicar un juego'],
+['Nada encontrado com esses filtros.','Nothing found with these filters.','No se encontró nada con estos filtros.'],['Entre com sua conta para ver e postar jogos e vídeos.','Sign in to see and post games and videos.','Inicia sesión para ver y publicar juegos y vídeos.'],['Não foi possível carregar as publicações agora.','Could not load the posts right now.','No se pudieron cargar las publicaciones ahora.'],
+['Gaste 🪙 RS Coins (de 2.500 a 100.000) ou as raras 💎 Gemas em itens do seu perfil.','Spend 🪙 RS Coins (2,500 to 100,000) or the rare 💎 Gems on items for your profile.','Gasta 🪙 RS Coins (de 2.500 a 100.000) o las raras 💎 Gemas en objetos de tu perfil.'],
+['🪙 moedas','🪙 coins','🪙 monedas'],['💎 gemas raras','💎 rare gems','💎 gemas raras'],
+['Como ganhar: 🪙 enquanto você fica online (mais rápido enquanto joga), em missões e na recompensa diária. 💎 chegam bem devagar: 1 a cada 30 min online (15 min jogando), em algumas missões e no dia 7 da sequência.','How to earn: 🪙 while you are online (faster while playing), from missions and the daily reward. 💎 arrive very slowly: 1 every 30 min online (15 min playing), from some missions and on day 7 of the streak.','Cómo ganar: 🪙 mientras estás en línea (más rápido mientras juegas), con misiones y con la recompensa diaria. Las 💎 llegan muy despacio: 1 cada 30 min en línea (15 min jugando), en algunas misiones y el día 7 de la racha.'],
+['Você é o dono: moedas e gemas infinitas e tudo liberado.','You are the owner: infinite coins and gems, everything unlocked.','Eres el dueño: monedas y gemas infinitas y todo desbloqueado.'],['Dica: jogue e cumpra missões para juntar mais rápido.','Tip: play and complete missions to earn faster.','Consejo: juega y cumple misiones para ganar más rápido.'],
+['Raro','Rare','Raro'],['Em uso','In use','En uso'],['Usar','Use','Usar'],['Comprar','Buy','Comprar'],['Grátis','Free','Gratis'],
+['▶ Assistir','▶ Watch','▶ Ver'],['▶ Jogar','▶ Play','▶ Jugar'],['Sem link','No link','Sin enlace'],['Excluir','Delete','Eliminar'],['Confirmar','Confirm','Confirmar'],
+['VÍDEO CURTO','SHORT VIDEO','VÍDEO CORTO'],['VÍDEO MÉDIO','MEDIUM VIDEO','VÍDEO MEDIO'],['VÍDEO LONGO','LONG VIDEO','VÍDEO LARGO'],['VÍDEO','VIDEO','VÍDEO'],['JOGO','GAME','JUEGO'],['ABRE EM NOVA ABA','OPENS IN A NEW TAB','SE ABRE EN OTRA PESTAÑA'],['Vídeo','Video','Vídeo'],['🎮 Jogo','🎮 Game','🎮 Juego'],['TOQUE EM JOGAR','TAP PLAY','TOCA JUGAR'],
+['Pessoas que acessaram','People who viewed','Personas que accedieron'],['Você','You','Tú'],['Jogador','Player','Jugador'],['agora','now','ahora'],
+['Fechar','Close','Cerrar'],['Nova publicação','New post','Nueva publicación'],['Tipo de publicação','Post type','Tipo de publicación'],['Descrição (opcional)','Description (optional)','Descripción (opcional)'],
+['Código do jogo (HTML)','Game code (HTML)','Código del juego (HTML)'],['Cole aqui o código completo do jogo, começando com <!DOCTYPE html>','Paste the full game code here, starting with <!DOCTYPE html>','Pega aquí el código completo del juego, empezando con <!DOCTYPE html>'],
+['Peça ao Claude para criar o jogo em um único arquivo HTML e cole aqui. Ele roda direto no site, sem sair da página.','Ask Claude to build the game as a single HTML file and paste it here. It runs right on the site, without leaving the page.','Pídele a Claude que cree el juego en un único archivo HTML y pégalo aquí. Se ejecuta directamente en el sitio, sin salir de la página.'],
+['Ou link do jogo (opcional)','Or game link (optional)','O enlace del juego (opcional)'],['Só é usado se você não colar o código. Abre em nova aba.','Only used if you do not paste the code. Opens in a new tab.','Solo se usa si no pegas el código. Se abre en otra pestaña.'],
+['Teste (não publicado ainda)','Test (not published yet)','Prueba (aún sin publicar)'],['▶ Testar','▶ Test','▶ Probar'],['Cancelar','Cancel','Cancelar'],['Publicar','Publish','Publicar'],['Publicando…','Publishing…','Publicando…'],['Enviando foto…','Uploading photo…','Subiendo foto…'],['Enviando vídeo…','Uploading video…','Subiendo vídeo…'],
+['Capa (opcional)','Cover (optional)','Portada (opcional)'],['Tirar','Remove','Quitar'],['Adicionar','Add','Añadir'],['Ou cole um link (YouTube, TikTok…)','Or paste a link (YouTube, TikTok…)','O pega un enlace (YouTube, TikTok…)'],
+['🎥 Gravar vídeo','🎥 Record video','🎥 Grabar vídeo'],['📷 Tirar foto','📷 Take photo','📷 Tomar foto'],['🖼️ Galeria','🖼️ Gallery','🖼️ Galería'],
+['Dê um título para a publicação.','Give the post a title.','Ponle un título a la publicación.'],['Cole o código do jogo ou o link completo, começando com https://','Paste the game code or the full link, starting with https://','Pega el código del juego o el enlace completo, empezando con https://'],['O código é grande demais (máximo de 700 mil caracteres).','The code is too large (700,000 characters at most).','El código es demasiado grande (máximo 700 mil caracteres).'],['Enviando código…','Uploading code…','Subiendo código…'],['Carregando o jogo…','Loading the game…','Cargando el juego…'],['Protegendo o código…','Protecting the code…','Protegiendo el código…'],['O código ocupa espaço demais para salvar (limite de cerca de 240 KB). Use menos acentos e emojis ou reduza o jogo.','The code takes up too much space to save (about 240 KB limit). Use fewer accents and emojis or shrink the game.','El código ocupa demasiado espacio para guardarse (límite de unos 240 KB). Usa menos acentos y emojis o reduce el juego.'],
+['Use vídeo (MP4, WebM ou gravação do celular) ou foto, de até 20 MB cada. Grave vídeos curtos.','Use video (MP4, WebM or a phone recording) or photos, up to 20 MB each. Record short videos.','Usa vídeo (MP4, WebM o grabación del móvil) o fotos, de hasta 20 MB cada una. Graba vídeos cortos.'],['Adicione pelo menos um vídeo ou foto em alguma das partes.','Add at least one video or photo to one of the parts.','Añade al menos un vídeo o foto en alguna de las partes.'],['A capa precisa ser imagem de até 20 MB.','The cover must be an image up to 20 MB.','La portada debe ser una imagen de hasta 20 MB.'],['O link precisa começar com https://','The link must start with https://','El enlace debe empezar con https://'],
+['Não foi possível publicar agora. Tente de novo.','Could not publish right now. Try again.','No se pudo publicar ahora. Inténtalo de nuevo.'],['Um arquivo é grande demais (máximo de 20 MB).','A file is too large (20 MB maximum).','Un archivo es demasiado grande (máximo 20 MB).'],['O espaço de armazenamento do site acabou.','The site storage is full.','Se agotó el espacio de almacenamiento del sitio.'],['Sua conta não tem permissão para postar ou o tipo do arquivo não é aceito.','Your account cannot post or the file type is not accepted.','Tu cuenta no tiene permiso para publicar o el tipo de archivo no es válido.'],
+['Cole o código do jogo para testar.','Paste the game code to test it.','Pega el código del juego para probarlo.'],['Publicado! Confira a missão de hoje em Recompensas.','Published! Check today\'s mission in Rewards.','¡Publicado! Mira la misión de hoy en Recompensas.'],['Publicação removida.','Post removed.','Publicación eliminada.'],['Não foi possível remover agora.','Could not remove it right now.','No se pudo eliminar ahora.'],
+['Entre com sua conta para curtir.','Sign in to like.','Inicia sesión para dar me gusta.'],['Não foi possível curtir agora.','Could not like right now.','No se pudo dar me gusta ahora.'],['Entre com sua conta para postar.','Sign in to post.','Inicia sesión para publicar.'],['Sua conta só pode ver. Peça acesso para postar.','Your account can only view. Ask for access to post.','Tu cuenta solo puede ver. Pide acceso para publicar.'],
+['Espere alguns segundos antes de postar de novo.','Wait a few seconds before posting again.','Espera unos segundos antes de publicar de nuevo.'],['Dados alterados fora do site. Carteira restaurada.','Data was changed outside the site. Wallet restored.','Datos modificados fuera del sitio. Cartera restaurada.'],
+['Este vídeo não tem partes.','This video has no parts.','Este vídeo no tiene partes.'],['Link inválido.','Invalid link.','Enlace no válido.'],['Abrir o vídeo em nova aba','Open the video in a new tab','Abrir el vídeo en una pestaña nueva'],
+['↻ Reiniciar','↻ Restart','↻ Reiniciar'],['⛶ Tela cheia','⛶ Full screen','⛶ Pantalla completa'],['Erro ao abrir o jogo','Error opening the game','Error al abrir el juego'],['Tela cheia indisponível aqui.','Full screen is not available here.','Pantalla completa no disponible aquí.'],['+1 💎 por tempo jogando!','+1 💎 for playing time!','¡+1 💎 por tiempo de juego!'],
+['Entre para','Sign in to','Inicia sesión para'],['jogar.','play.','jugar.'],['O rsgames é só para quem está com a conta logada. Entre com sua conta (pode ser a do Google) para ver jogos e vídeos, postar, ganhar moedas e ter seu perfil.','rsgames is only for people signed in to their account. Sign in (it can be your Google account) to see games and videos, post, earn coins and have your profile.','rsgames es solo para quien tiene la sesión iniciada. Inicia sesión (puede ser con tu cuenta de Google) para ver juegos y vídeos, publicar, ganar monedas y tener tu perfil.'],['Já entrei, recarregar','I\'m in, reload','Ya entré, recargar'],
+['Configurações','Settings','Ajustes'],['Ajuste o site do seu jeito. As escolhas ficam salvas neste aparelho.','Set the site up your way. Your choices are saved on this device.','Ajusta el sitio a tu manera. Tus opciones se guardan en este dispositivo.'],
+['Idioma','Language','Idioma'],['Aparência','Appearance','Apariencia'],['Tema','Theme','Tema'],['Automático','Automatic','Automático'],['Claro','Light','Claro'],['Escuro','Dark','Oscuro'],['Tamanho do texto','Text size','Tamaño del texto'],['Pequeno','Small','Pequeño'],['Normal','Normal','Normal'],['Grande','Large','Grande'],
+['Reduzir animações','Reduce motion','Reducir animaciones'],['Mostrar avisos na tela','Show on-screen notices','Mostrar avisos en pantalla'],['Dados deste aparelho','Data on this device','Datos de este dispositivo'],['Limpar o cache deste aparelho','Clear cache on this device','Borrar la caché de este dispositivo'],['Cache limpo. Suas moedas continuam salvas na sua conta.','Cache cleared. Your coins are still saved to your account.','Caché borrada. Tus monedas siguen guardadas en tu cuenta.'],
+['Sobre','About','Acerca de'],['O rsgames guarda suas moedas e gemas na sua conta. Os dados têm proteção contra edição simples, mas nenhum site é 100% à prova de fraude.','rsgames keeps your coins and gems in your account. The data is protected against simple tampering, but no site is 100% fraud-proof.','rsgames guarda tus monedas y gemas en tu cuenta. Los datos están protegidos contra manipulación sencilla, pero ningún sitio es 100 % a prueba de fraudes.']
+];
+L.forEach(function(r){DICT.en[r[0]]=r[1];DICT.es[r[0]]=r[2];});})();
+var PAT=[
+[/^há (\d+) (min|h|d)$/,'$1 $2 ago','hace $1 $2'],[/^Nível (\d+)$/,'Level $1','Nivel $1'],[/^(\d+) publicações$/,'$1 posts','$1 publicaciones'],[/^(\d+) partes$/,'$1 parts','$1 partes'],[/^(\d+) itens$/,'$1 items','$1 artículos'],
+[/^Faltam ([\d.,]+) (🪙|💎)$/,'$1 $2 to go','Faltan $1 $2'],[/^Dia (\d+)$/,'Day $1','Día $1'],[/^Pegar ([\d.,]+) moedas$/,'Claim $1 coins','Reclamar $1 monedas'],[/^Receber (.+)$/,'Claim $1','Reclamar $1'],
+[/^([\d.,]+) XP\. Faltam ([\d.,]+) para o nível (\d+)\.$/,'$1 XP. $2 more for level $3.','$1 XP. Faltan $2 para el nivel $3.'],
+[/^Início (\d+)$/,'Start $1','Inicio $1'],[/^Meio (\d+)$/,'Middle $1','Medio $1'],[/^Fim (\d+)$/,'End $1','Fin $1'],[/^Curtir (.+)$/,'Like $1','Me gusta $1'],
+[/^\+([\d.,]+) moedas! Sequência de (\d+) dias?\.$/,'+$1 coins! $2-day streak.','+$1 monedas. Racha de $2 días.'],[/^\+([\d.,]+) moedas e 2 💎! Sequência de (\d+) dias\.$/,'+$1 coins and 2 💎! $2-day streak.','+$1 monedas y 2 💎. Racha de $2 días.'],
+[/^Missão concluída: \+([\d.,]+) moedas e \+(\d+) 💎\.$/,'Mission complete: +$1 coins and +$2 💎.','Misión completada: +$1 monedas y +$2 💎.'],[/^Missão concluída: \+([\d.,]+) moedas\.$/,'Mission complete: +$1 coins.','Misión completada: +$1 monedas.'],
+[/^(.+) é seu! Já está em uso\.$/,'$1 is yours! Now in use.','¡$1 es tuyo! Ya está en uso.'],[/^Abrir no (.+) em nova aba$/,'Open on $1 in a new tab','Abrir en $1 en una pestaña nueva'],[/^👁 ([\d.,]+) acessos$/,'👁 $1 views','👁 $1 accesos'],
+[/^Gravar vídeo em (.+)$/,'Record video in $1','Grabar vídeo en $1'],[/^Tirar foto em (.+)$/,'Take photo in $1','Tomar foto en $1'],[/^Escolher da galeria em (.+)$/,'Choose from gallery in $1','Elegir de la galería en $1'],[/^Link de (.+)$/,'Link for $1','Enlace de $1'],[/^Arquivos de (.+)$/,'Files for $1','Archivos de $1']];
+function tr(s){var l=S.cfg&&S.cfg.lang;if(!s||!l||l==='pt')return s;var d=DICT[l],k=String(s).trim();if(!k)return s;
+if(Object.prototype.hasOwnProperty.call(d,k))return String(s).replace(k,function(){return d[k];});
+for(var i=0;i<PAT.length;i++){var m=PAT[i][0].exec(k);if(m){var t=PAT[i][l==='en'?1:2];return String(s).replace(k,function(){return t.replace(/\$(\d)/g,function(x,n){return m[n]==null?'':(tr(m[n])||m[n]);});});}}
+return s;}
+var i18nOn=false,i18nQ=false;
+function i18n(){if(!S.cfg||S.cfg.lang==='pt'||!document.body)return;i18nOn=true;
+try{var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),n,list=[];while((n=w.nextNode()))list.push(n);
+list.forEach(function(n){var p=n.parentElement;if(!p||p.closest('script,style,textarea,.card h3,.desc,.by b,.pname'))return;var v=n.nodeValue,t=tr(v);if(t!==v)n.nodeValue=t;});
+document.querySelectorAll('[placeholder],[aria-label],[title]').forEach(function(e){['placeholder','aria-label','title'].forEach(function(a){var v=e.getAttribute(a);if(v){var t=tr(v);if(t!==v)e.setAttribute(a,t);}});});}catch(e){}
+i18nOn=false;}
+new MutationObserver(function(){if(i18nOn||i18nQ)return;i18nQ=true;requestAnimationFrame(function(){i18nQ=false;i18n();});}).observe(document.body,{childList:true,subtree:true});
+function viewConfig(){
+var c=S.cfg;
+function sel(id,label,opts,val,on){return h('div',{class:'field'},h('label',{for:id,text:label}),h('select',{id:id,onchange:function(e){on(e.target.value);}},opts.map(function(o){return h('option',{value:o[0],selected:val===o[0]},o[1]);})));}
+function chk(id,label,val,on){return h('label',{class:'chk'},h('input',{type:'checkbox',id:id,checked:val,onchange:function(e){on(e.target.checked);}}),h('span',{text:label}));}
+return h('div',{class:'wrap'},h('div',{class:'page-h'},h('h1',{text:'Configurações'}),h('p',{text:'Ajuste o site do seu jeito. As escolhas ficam salvas neste aparelho.'})),
+h('div',{class:'two'},
+h('section',{class:'panel'},h('h2',{text:'Idioma'}),sel('cfg-lang','Idioma',Object.keys(LANGS).map(function(k){return [k,LANGS[k]];}),c.lang,function(v){setLang(v);})),
+h('section',{class:'panel'},h('h2',{text:'Aparência'}),
+sel('cfg-theme','Tema',[['auto','Automático'],['light','Claro'],['dark','Escuro']],c.theme,function(v){c.theme=v;saveCfg();}),
+sel('cfg-size','Tamanho do texto',[['s','Pequeno'],['m','Normal'],['l','Grande']],c.size,function(v){c.size=v;saveCfg();}),
+chk('cfg-calm','Reduzir animações',c.calm,function(v){c.calm=v;saveCfg();}),
+chk('cfg-toasts','Mostrar avisos na tela',c.toasts,function(v){c.toasts=v;saveCfg();}))),
+h('section',{class:'sec'},h('div',{class:'panel'},h('h2',{text:'Som'}),chk('cfg-music','Música de fundo',c.music,function(v){c.music=v;saveCfg();if(v)unlock();}),h('div',{class:'field'},h('label',{for:'cfg-vol',text:'Volume'}),h('input',{id:'cfg-vol',type:'range',min:'0',max:'100',value:String(c.vol),oninput:function(e){c.vol=+e.target.value;saveCfg();}})),chk('cfg-sfx','Efeitos sonoros',c.sfx,function(v){c.sfx=v;saveCfg();}))),
+h('section',{class:'sec'},h('div',{class:'panel'},h('h2',{text:'Dados deste aparelho'}),
+h('div',{class:'row',style:'margin-top:10px'},h('button',{class:'btn',type:'button',onclick:function(){try{localStorage.removeItem(LS+':'+(S.uid||''));}catch(e){}toast('Cache limpo. Suas moedas continuam salvas na sua conta.');}},'Limpar o cache deste aparelho')))),
+h('section',{class:'sec'},h('div',{class:'panel'},h('h2',{text:'Sobre'}),h('p',{class:'muted small',style:'margin:6px 0 0',text:'O rsgames guarda suas moedas e gemas na sua conta. Os dados têm proteção contra edição simples, mas nenhum site é 100% à prova de fraude.'}))));}
+
+function levelOf(xp){return Math.floor(Math.sqrt((xp||0)/60))+1;}
+function gain(w,n,g){w.coins+=n;w.xp+=Math.ceil(n/10);w.gems+=(g||0);}
+function h(tag,attrs){
+var el=document.createElement(tag);
+if(attrs)Object.keys(attrs).forEach(function(k){var v=attrs[k];if(v==null||v===false)return;
+if(k==='class')el.className=v;else if(k==='text')el.textContent=v;else if(k==='style')el.style.cssText=v;
+else if(k.slice(0,2)==='on')el.addEventListener(k.slice(2),v);else el.setAttribute(k,v===true?'':v);});
+for(var i=2;i<arguments.length;i++){var kids=[].concat(arguments[i]);for(var j=0;j<kids.length;j++){var c=kids[j];if(c==null||c===false)continue;el.append(c.nodeType?c:document.createTextNode(String(c)));}}
+return el;}
+function fmt(n){return Number(n||0).toLocaleString((S.cfg&&LOC[S.cfg.lang])||'pt-BR');}
+function ago(ts){var s=Math.max(0,(Date.now()-(Number(ts)||0))/1000);if(s<60)return 'agora';if(s<3600)return 'há '+Math.floor(s/60)+' min';if(s<86400)return 'há '+Math.floor(s/3600)+' h';return 'há '+Math.floor(s/86400)+' d';}
+function platformOf(u){try{var host=new URL(u).hostname.toLowerCase();for(var i=0;i<PLATFORMS.length;i++)if(PLATFORMS[i].re.test(host))return PLATFORMS[i];}catch(e){}return null;}
+function safeUrl(u){try{var x=new URL(String(u||'').trim());return (x.protocol==='https:'||x.protocol==='http:')?x.href:'';}catch(e){return '';}}
+function toast(msg){if(/^(\+\d|Missão concluída|Publicado!)|é seu!/.test(String(msg)))boom();if(S.cfg&&S.cfg.toasts===false)return;var t=h('div',{class:'toast',text:msg});document.getElementById('toasts').append(t);setTimeout(function(){t.remove();},3400);}
+function item(kind,id){var l=SHOP[kind];return l.find(function(x){return x.id===id;})||l[0];}
+function owns(kind,it,w){return (it.price===0&&!it.gem)||w.owned.indexOf(kind+':'+it.id)>=0;}
+function eqOf(uid){var d=uid===S.uid?S.wallet:S.profiles[uid];return Object.assign({},DEF_EQ,(d&&d.equip)||{});}
+function nameOfUid(uid){return S.names[uid]||(S.pn&&S.pn[uid])||(uid&&uid===S.uid?tr('Você'):tr('Jogador'));}
+function nameEl(uid){return h('b',{text:nameOfUid(uid),style:item('color',eqOf(uid).color).css||''});}
+function avatarEl(eq,size){return h('div',{class:'av',style:'width:'+size+'px;height:'+size+'px;font-size:'+Math.round(size*.5)+'px;'+item('frame',eq.frame).css,text:item('avatar',eq.avatar).id});}
+function likesOf(id){var s=S.likes.get(id);return s?s.size:0;}
+function isImg(f){return !!f&&(f.type||'').indexOf('image/')===0;}
+function fileOk(f){var t=f.type||'';return VTYPES.indexOf(t)>=0||ITYPES.indexOf(t)>=0||t.indexOf('video/')===0;}
+
+/* carteira e perfil online */
+var saving=false,dirty=false;
+function persist(){
+try{localStorage.setItem(LS+':'+(S.uid||''),JSON.stringify(S.wallet));}catch(e){}
+if(!S.db||!S.uid)return;
+dirty=true;if(saving)return;saving=true;
+(async function(){try{while(dirty){dirty=false;var w=JSON.parse(JSON.stringify(S.wallet));w.sig=sign(S.wallet);
+await S.db.doc('data/users/'+S.uid+'/wallet').set(w);
+await S.db.doc('profiles/'+S.uid).set({uid:S.uid,bio:w.bio,equip:w.equip,xp:w.xp});}}catch(e){}finally{saving=false;}})();}
+function mutate(fn){fn(S.wallet);S.wallet=normalize(S.wallet);persist();render();}
+function claimedToday(){return S.wallet.lastDaily===dayKey(0);}
+function curStreak(){var w=S.wallet;return (w.lastDaily===dayKey(0)||w.lastDaily===dayKey(-1))?w.streak:0;}
+function claimDaily(){
+if(claimedToday())return;
+var streak=(S.wallet.lastDaily===dayKey(-1)?S.wallet.streak:0)+1,reward=DAILY[(streak-1)%7];
+mutate(function(w){w.streak=streak;w.lastDaily=dayKey(0);gain(w,reward,streak%7===0?2:0);});
+toast('+'+reward+(streak%7===0?' moedas e 2 💎! Sequência de ':' moedas! Sequência de ')+streak+(streak===1?' dia.':' dias.'));}
+function claimMission(m){
+var w=S.wallet;if(w.m.claimed.indexOf(m.id)>=0||m.get(w.m)<m.target)return;
+mutate(function(x){gain(x,m.reward,m.gem);x.m.claimed.push(m.id);});toast('Missão concluída: +'+fmt(m.reward)+' moedas'+(m.gem?' e +'+m.gem+' 💎':'')+'.');}
+function canBuy(it,w){return S.isOwner||(it.gem?w.gems>=it.gem:w.coins>=it.price);}
+function buy(kind,it){
+var w=S.wallet;if(owns(kind,it,w)||!canBuy(it,w))return;
+mutate(function(x){if(!S.isOwner){if(it.gem)x.gems-=it.gem;else x.coins-=it.price;}x.owned.push(kind+':'+it.id);x.equip[kind]=it.id;});toast(it.name+' é seu! Já está em uso.');}
+function equip(kind,it){mutate(function(x){x.equip[kind]=it.id;});}
+function opened(id){if(S.wallet.m.openIds.indexOf(id)<0)mutate(function(w){w.m.openIds.push(id);});}
+/* cabeçalho */
+function renderChrome(){
+var tabs=document.getElementById('tabs');
+if(!tabs.firstChild)ROUTES.forEach(function(r){tabs.append(h('a',{href:'#'+r,'data-r':r,text:LABEL[r]}));});
+tabs.querySelectorAll('a').forEach(function(a){a.setAttribute('aria-current',a.dataset.r===S.route?'page':'false');});
+var gated=false;document.getElementById('btn-post').hidden=gated;document.getElementById('coins').hidden=gated;
+var ck=S.isOwner?'o':S.wallet.coins+'|'+S.wallet.gems,ce=document.getElementById('coins');if(S.ck!==undefined&&S.ck!==ck&&!S.cfg.calm){ce.classList.remove('pop');void ce.offsetWidth;ce.classList.add('pop');}S.ck=ck;
+document.getElementById('coins').replaceChildren('🪙 ',h('span',{text:S.isOwner?'∞':fmt(S.wallet.coins)}),h('span',{style:'margin-left:10px'},'💎 ',h('span',{text:S.isOwner?'∞':fmt(S.wallet.gems)})));}
+
+/* cartões */
+function placeholder(t){return h('div',{class:'ph'},h('b',{text:(String(t).trim()[0]||'?').toUpperCase()}));}
+function firstAsset(p){var f=null;PARTS.forEach(function(pt){((p.parts||{})[pt[0]]||[]).forEach(function(it){if(!f&&it.a)f=it;});});return f;}
+function firstLink(p){var f=p.url||'';PARTS.forEach(function(pt){((p.parts||{})[pt[0]]||[]).forEach(function(it){if(!f&&it.u)f=it.u;});});return safeUrl(f);}
+function countItems(p){var n=0;PARTS.forEach(function(pt){n+=((p.parts||{})[pt[0]]||[]).length;});return n;}
+function postCard(p){
+var likes=S.likes.get(p.id)||new Set(),liked=!!(S.uid&&likes.has(S.uid)),isV=p.type==='video';
+var thumb=h('div',{class:'thumb'}),a=isV?firstAsset(p):null,link=isV?firstLink(p):safeUrl(p.url);
+if(p.coverId)thumb.append(h('img',{src:'/_blob/'+p.coverId,alt:'Capa de '+p.title,loading:'lazy'}));
+else if(a&&a.t==='i')thumb.append(h('img',{src:'/_blob/'+a.a,alt:'',loading:'lazy'}));
+else if(a)thumb.append(h('video',{src:'/_blob/'+a.a+'#t=0.5',preload:'metadata',muted:true,playsinline:true,'aria-hidden':'true',tabindex:'-1'}));
+else if(isV&&link){var pl=platformOf(link);thumb.append(h('div',{class:'pf'},h('b',{text:pl?pl.name:'Vídeo'}),h('small',{text:'ABRE EM NOVA ABA'})));}
+else if(!isV&&(p.code||p.codeN))thumb.append(h('div',{class:'pf'},h('b',{text:'🎮 Jogo'}),h('small',{text:'TOQUE EM JOGAR'})));
+else thumb.append(placeholder(p.title));
+thumb.append(h('span',{class:'kind',text:isV?('VÍDEO '+(KINDS[p.kind]||'').toUpperCase()).trim():'JOGO'}));
+if(Date.now()-(p.createdAt||0)<864e5)thumb.append(h('span',{class:'kind new',text:'NOVO'}));else if(viewsOf(p.id)>=3)thumb.append(h('span',{class:'kind new hot',text:'🔥 EM ALTA'}));
+var act;
+if(isV)act=h('button',{class:'btn primary sm',type:'button',onclick:function(){watch(p);}},'▶ Assistir');
+else if(p.code||p.codeN)act=h('button',{class:'btn primary sm',type:'button',onclick:function(){playGame(p);}},'▶ Jogar');
+else if(link)act=h('a',{class:'btn primary sm',href:link,target:'_blank',rel:'noopener noreferrer',onclick:function(){opened(p.id);trackView(p);}},'▶ Jogar');
+else act=h('span',{class:'chip',text:'Sem link'});
+return h('article',{class:'card'},thumb,h('div',{class:'card-b'},
+h('h3',{text:p.title}),p.desc?h('p',{class:'desc',text:p.desc}):null,
+h('div',{class:'by'},h('button',{type:'button',onclick:function(){showProfile(p.authorId);}},nameEl(p.authorId)),h('span',{class:'chip',text:item('title',eqOf(p.authorId).title).name}),h('span',{class:'muted',text:ago(p.createdAt)}),h('span',{class:'chip',title:'Pessoas que acessaram',text:'👁 '+fmt(viewsOf(p.id))}),isV&&countItems(p)>1?h('span',{class:'chip',text:countItems(p)+' partes'}):null),
+h('div',{class:'card-f'},act,
+h('button',{class:'btn sm like',type:'button','aria-pressed':liked?'true':'false','aria-label':'Curtir '+p.title,onclick:function(){toggleLike(p);}},'♥ '+likes.size),
+(S.uid&&(p.authorId===S.uid||S.isAdmin))?delButton(p):null)));}
+function delButton(p){
+var armed=false,t=0,b=h('button',{class:'btn sm danger',type:'button',text:'Excluir'});
+b.addEventListener('click',function(){if(!armed){armed=true;b.textContent='Confirmar';t=setTimeout(function(){armed=false;b.textContent='Excluir';},3000);}else{clearTimeout(t);delPost(p);}});
+return b;}
+async function delPost(p){
+try{await S.db.collection('posts').doc(p.id).delete();for(var q=0;q<(p.codeN||0);q++)S.db.collection('codes').doc(p.id+'_'+q).delete().catch(function(){});
+var ids=[p.coverId];PARTS.forEach(function(pt){((p.parts||{})[pt[0]]||[]).forEach(function(it){ids.push(it.a);});});
+ids.forEach(function(a){if(a&&S.assets)S.assets.delete(a).catch(function(){});});toast('Publicação removida.');}
+catch(e){toast('Não foi possível remover agora.');}}
+async function toggleLike(p){
+if(!S.db||!S.uid){toast('Entre com sua conta para curtir.');return;}
+var ref=S.db.collection('likes').doc(p.id+'_'+S.uid),set=S.likes.get(p.id),liked=!!(set&&set.has(S.uid));
+try{if(liked)await ref.delete();else{await ref.set({postId:p.id,uid:S.uid,t:Date.now()});
+if(S.wallet.m.likedIds.indexOf(p.id)<0)mutate(function(w){w.m.likedIds.push(p.id);});}}
+catch(e){toast('Não foi possível curtir agora.');}}
+function loadingNow(){return !S.initDone||(S.db&&!S.postsReady&&!S.postsErr);}
+function postsBlock(list,emptyMsg,label,kind,hasAny){
+if(list.length)return h('div',{class:'grid'},list.map(postCard));
+if(loadingNow())return h('div',{class:'grid','aria-busy':'true'},[1,2,3].map(function(){return h('div',{class:'skel'});}));
+if(!S.db)return h('p',{class:'note',text:'Entre com sua conta para ver e postar jogos e vídeos.'});
+if(S.postsErr)return h('p',{class:'note',text:'Não foi possível carregar as publicações agora.'});
+if(hasAny)return h('p',{class:'note',text:'Nada encontrado com esses filtros.'});
+return h('div',{class:'empty'},h('p',{text:emptyMsg}),h('button',{class:'btn primary',type:'button',onclick:function(){compose(kind);}},label));}
+function byType(t){return S.posts.filter(function(p){return p.type===t;});}
+function filtered(list,isV){
+var q=S.q.trim().toLowerCase();
+var out=list.filter(function(p){
+if(q&&(p.title+' '+(p.desc||'')+' '+(S.names[p.authorId]||'')).toLowerCase().indexOf(q)<0)return false;
+if(isV&&S.kf!=='all'&&p.kind!==S.kf)return false;return true;});
+if(S.sort==='liked')out.sort(function(a,b){return (likesOf(b.id)-likesOf(a.id))||(b.createdAt-a.createdAt);});
+if(S.sort==='viewed')out.sort(function(a,b){return (viewsOf(b.id)-viewsOf(a.id))||(b.createdAt-a.createdAt);});
+return out;}
+function toolbar(isV){
+var nodes=[h('div',{class:'tools'},
+h('input',{id:'q',type:'search',placeholder:isV?'Buscar vídeos':'Buscar jogos','aria-label':'Buscar',value:S.q,autocomplete:'off',oninput:function(e){S.q=e.target.value;render();}}),
+h('select',{'aria-label':'Ordenar por',onchange:function(e){S.sort=e.target.value;render();}},h('option',{value:'recent',selected:S.sort==='recent'},'Mais recentes'),h('option',{value:'liked',selected:S.sort==='liked'},'Mais curtidos'),h('option',{value:'viewed',selected:S.sort==='viewed'},'Mais vistos')))];
+if(isV){var opts=[['all','Todos'],['curto','Curtos'],['medio','Médios'],['longo','Longos']];
+nodes.push(h('div',{class:'fchips',role:'group','aria-label':'Tipo de vídeo'},opts.map(function(o){return h('button',{class:'fchip',type:'button','aria-pressed':S.kf===o[0]?'true':'false',onclick:function(){S.kf=o[0];render();}},o[1]);})));}
+return nodes;}
+
+/* recompensas */
+function dailyPanel(){
+var w=S.wallet,done=claimedToday()?((w.streak-1)%7)+1:(curStreak()%7),nowIdx=claimedToday()?-1:done;
+var cells=DAILY.map(function(v,i){return h('div',{class:'day'+(i<done?' done':'')+(i===nowIdx?' now':'')},'Dia '+(i+1),h('b',{text:String(v)}));});
+var next=DAILY[(claimedToday()?w.streak:curStreak())%7];
+return h('section',{class:'panel','aria-label':'Recompensa diária'},h('h2',{text:'Recompensa diária'}),
+h('p',{class:'muted small',style:'margin:0'},'Entre todo dia para manter a sequência. O dia 7 paga mais.'),h('div',{class:'days'},cells),
+h('button',{class:'btn primary',type:'button',disabled:claimedToday(),onclick:claimDaily},claimedToday()?'Volte amanhã':'Pegar '+next+' moedas'));}
+function levelPanel(){
+var w=S.wallet,l=levelOf(w.xp),lo=60*(l-1)*(l-1),hi=60*l*l,pct=Math.max(2,Math.round((w.xp-lo)/(hi-lo)*100));
+return h('section',{class:'panel'},h('div',{class:'lvl'},h('span',{class:'badge',text:'Nível '+l}),h('span',{class:'muted small',text:fmt(w.xp)+' XP. Faltam '+fmt(hi-w.xp)+' para o nível '+(l+1)+'.'})),h('div',{class:'bar',style:'margin-top:12px'},h('i',{style:'width:'+pct+'%'})));}
+function missionsList(){
+var w=S.wallet;
+return h('ul',{class:'missions'},MISSIONS.map(function(m){
+var val=Math.min(m.get(w.m),m.target),claimed=w.m.claimed.indexOf(m.id)>=0,ready=!claimed&&val>=m.target;
+return h('li',{class:'mission'},h('div',null,h('h3',{text:m.label}),h('div',{class:'bar'},h('i',{style:'width:'+Math.round(val/m.target*100)+'%'})),h('div',{class:'muted small',text:val+' / '+m.target})),
+h('button',{class:'btn sm'+(ready?' primary':''),type:'button',disabled:!ready,onclick:function(){claimMission(m);}},claimed?'Recebido':'Receber 🪙'+fmt(m.reward)+(m.gem?' +💎'+m.gem:'')));}));}
+
+/* perfil */
+function profileCard(uid,mine){
+var d=mine?S.wallet:(S.profiles[uid]||{}),eq=eqOf(uid),l=levelOf(d.xp||0);
+return h('div',{class:'pcard'},h('div',{class:'pban',style:item('banner',eq.banner).css}),
+h('div',{class:'pbody'},avatarEl(eq,76),h('div',{class:'pname'},nameEl(uid)),
+h('div',{style:'display:flex;gap:6px;flex-wrap:wrap;margin-top:6px'},h('span',{class:'chip',text:item('title',eq.title).name}),h('span',{class:'chip own',text:'Nível '+l})),
+d.bio?h('p',{style:'margin:12px 0 0;overflow-wrap:anywhere',text:d.bio}):h('p',{class:'muted small',style:'margin:12px 0 0',text:'Sem biografia ainda.'}),
+h('p',{class:'muted small',style:'margin:8px 0 0',text:byType('game').concat(byType('video')).filter(function(p){return p.authorId===uid;}).length+' publicações'}),h('p',{class:'muted small',style:'margin:4px 0 0',text:'👁 '+fmt(viewTotal(uid))+' acessos'})));}
+function postsOf(uid,title){
+var l=S.posts.filter(function(p){return p.authorId===uid;});
+return h('section',{class:'sec'},h('div',{class:'sec-h'},h('h2',{text:title}),h('span',{class:'muted small',text:l.length+' publicações'})),
+l.length?h('div',{class:'grid'},l.map(postCard)):h('p',{class:'note',text:'Ainda não publicou nada.'}));}
+function creatorsBlock(){
+var c={};S.posts.forEach(function(p){if(p.authorId)c[p.authorId]=(c[p.authorId]||0)+1;});
+var ids=Object.keys(c).sort(function(a,b){return c[b]-c[a];}).slice(0,8);if(!ids.length)return null;
+return h('section',{class:'sec'},h('div',{class:'sec-h'},h('h2',{text:'Criadores'})),
+h('div',{class:'fchips'},ids.map(function(u){return h('button',{class:'fchip',type:'button',style:'display:inline-flex;align-items:center;gap:8px',onclick:function(){showProfile(u);}},avatarEl(eqOf(u),28),nameEl(u),h('span',{class:'muted small',text:c[u]+' publicações'}));})));}
+function showProfile(uid){
+if(!uid)return;
+var close=h('button',{class:'icon-btn',type:'button','aria-label':'Fechar',onclick:closeOverlay,text:'×'});
+showOverlay(h('div',{class:'modal wide',role:'dialog','aria-modal':'true','aria-label':'Perfil'},h('div',{class:'modal-head'},h('h2',{text:'Perfil'}),close),profileCard(uid,uid===S.uid),postsOf(uid,'Publicações')),true);close.focus();}
+function viewPerfil(){
+if(!S.db||!S.uid)return h('div',{class:'wrap'},h('div',{class:'page-h'},h('h1',{text:'Perfil'}),h('p',{text:'Entre com sua conta para ter um perfil online que todo mundo vê.'})),h('div',{class:'sec'},h('p',{class:'note',text:'Sua conta aparece aqui assim que você abrir o site logado. Enquanto isso, o que você ganha fica salvo só neste navegador.'})));
+var w=S.wallet,bio=h('textarea',{id:'bio',maxlength:'160',placeholder:'Conte algo sobre você'});bio.value=w.bio;
+var eqrow=Object.keys(SHOP).map(function(kind){
+var sel=h('select',{id:'eq-'+kind,'aria-label':KLABEL[kind],onchange:function(e){equip(kind,item(kind,e.target.value));}},
+SHOP[kind].filter(function(it){return owns(kind,it,w);}).map(function(it){return h('option',{value:it.id,selected:w.equip[kind]===it.id},it.name);}));
+return h('div',{class:'field',style:'margin:0'},h('label',{for:'eq-'+kind,text:KLABEL[kind]}),sel);});
+return h('div',{class:'wrap'},h('div',{class:'page-h'},h('h1',{text:'Seu perfil'}),h('p',{text:'É assim que os outros veem você. Compre itens na loja e use aqui.'})),
+h('section',{class:'sec'},profileCard(S.uid,true),
+h('div',{class:'eqrow'},eqrow),
+h('div',{class:'field'},h('label',{for:'bio',text:'Biografia'}),bio),
+h('div',{class:'row'},h('button',{class:'btn primary',type:'button',onclick:function(){var v=document.getElementById('bio').value.trim();mutate(function(x){x.bio=v;});toast('Perfil salvo.');}},'Salvar biografia'),h('a',{class:'btn',href:'#loja',text:'Ir para a loja'})))
+,postsOf(S.uid,'Suas publicações'));}
+
+/* páginas */
+function stat(n,label){return h('div',{class:'stat'},h('b',{text:S.postsReady?fmt(n):'–'}),h('span',{text:label}));}
+function viewInicio(){
+var likeTotal=0;S.likes.forEach(function(s){likeTotal+=s.size;});
+return h('div',{class:'wrap'},h('section',{class:'hero'},
+h('div',{class:'panel'},h('h1',null,'Poste seu jogo. Poste seu vídeo. Ganhe ',h('em',{text:'moedas.'})),
+h('p',{text:'Vídeos curtos, médios e longos, montados em início, meio e fim do seu jeito. Grave na hora ou escolha da galeria. Crie seu perfil, gaste suas RS Coins na loja e personalize tudo.'}),
+h('div',{class:'row'},h('button',{class:'btn primary',type:'button',onclick:function(){compose('curto');}},'Postar agora'),h('a',{class:'btn',href:'#videos',text:'Ver vídeos'}))),dailyPanel()),
+h('div',{class:'stats'},stat(byType('game').length,'jogos'),stat(byType('video').length,'vídeos'),stat(Object.keys(S.profiles).length,'perfis'),stat(likeTotal,'curtidas')),
+creatorsBlock(),h('section',{class:'sec'},h('div',{class:'sec-h'},h('h2',{text:'Novidades da comunidade'})),postsBlock(S.posts.slice(0,6),'Ainda não tem nada por aqui. Poste o primeiro jogo ou vídeo.','Postar agora','curto',false)));}
+function listPage(type,title,sub){
+var isV=type==='video',all=byType(type),list=filtered(all,isV);
+return h('div',{class:'wrap'},h('div',{class:'page-h'},h('h1',{text:title}),h('p',{text:sub})),
+h('section',{class:'sec'},h('div',{class:'sec-h'},h('h2',{text:isV?'Vídeos da galera':'Jogos da galera'}),h('button',{class:'btn sm',type:'button',onclick:function(){compose(isV?'curto':'jogo');}},isV?'Postar vídeo':'Postar jogo')),
+toolbar(isV),postsBlock(list,isV?'Nenhum vídeo postado ainda. Mande o primeiro.':'Nenhum jogo postado ainda. Que tal ser o primeiro?',isV?'Postar um vídeo':'Postar um jogo',isV?'curto':'jogo',all.length>0)));}
+function viewJogos(){return listPage('game','Jogos','Jogos que a comunidade postou. Abra, jogue e curta.');}
+function viewVideos(){return listPage('video','Vídeos','Curtos, médios e longos. Cada vídeo pode ter início, meio e fim com várias partes.');}
+function viewRecompensas(){
+return h('div',{class:'wrap'},h('div',{class:'page-h'},h('h1',{text:'Recompensas'}),h('p',{text:'Pegue moedas todo dia, cumpra missões e gaste tudo na loja.'})),
+h('div',{class:'sec'},levelPanel()),h('div',{class:'two'},dailyPanel()),
+h('section',{class:'sec'},h('div',{class:'sec-h'},h('h2',{text:'Missões de hoje'}),h('span',{class:'muted small',text:'Renovam à meia-noite'})),missionsList()));}
+function itemCard(kind,it){
+var w=S.wallet,own=owns(kind,it,w),on=w.equip[kind]===it.id,sample;
+if(kind==='title')sample=h('span',{class:'chip',text:it.name});
+else if(kind==='color')sample=h('b',{text:'Seu nome',style:it.css});
+else if(kind==='avatar')sample=avatarEl(Object.assign({},w.equip,{avatar:it.id}),52);
+else sample=h('div',{style:'width:100%;height:46px;border-radius:8px;'+it.css+(kind==='banner'?'':';background:var(--surface2)')});
+var act;
+if(on)act=h('button',{class:'btn sm',type:'button',disabled:true,text:'Em uso'});
+else if(own)act=h('button',{class:'btn sm',type:'button',onclick:function(){equip(kind,it);},text:'Usar'});
+else if(canBuy(it,w))act=h('button',{class:'btn primary sm',type:'button',onclick:function(){buy(kind,it);},text:'Comprar'});
+else act=h('button',{class:'btn sm',type:'button',disabled:true,text:'Faltam '+(it.gem?fmt(it.gem-w.gems)+' 💎':fmt(it.price-w.coins)+' 🪙')});
+return h('article',{class:'item'+(on?' on':'')},h('div',{class:'sample'},sample),h('h3',{text:it.name}),h('div',{class:'price'},it.gem?'💎 '+fmt(it.gem):(it.price?'🪙 '+fmt(it.price):'Grátis'),it.gem?h('span',{class:'chip own',text:'Raro'}):null),act);}
+function viewLoja(){
+var kinds=Object.keys(SHOP),cats=[['all','Todos']].concat(kinds.map(function(k){return [k,KPLURAL[k]];})).concat([['raro','💎 Raros']]);
+var chips=h('div',{class:'fchips',role:'group','aria-label':'Categorias'},cats.map(function(c){return h('button',{class:'fchip',type:'button','aria-pressed':S.sc===c[0]?'true':'false',onclick:function(){S.sc=c[0];render();}},c[1]);}));
+function list(kind){var l=SHOP[kind].filter(function(it){return S.sc!=='raro'||it.gem;});return l.slice().sort(function(a,b){return ((a.gem?1e6+a.gem:a.price)-(b.gem?1e6+b.gem:b.price));});}
+var secs=kinds.filter(function(k){return S.sc==='all'||S.sc==='raro'||S.sc===k;}).map(function(kind){var l=list(kind);if(!l.length)return null;
+return h('section',{class:'sec'},h('div',{class:'sec-h'},h('h2',{text:KPLURAL[kind]}),h('span',{class:'muted small',text:l.length+' itens'})),h('div',{class:'shop'},l.map(function(it){return itemCard(kind,it);})));});
+return h('div',{class:'wrap'},h('div',{class:'page-h'},h('h1',{text:'Loja'}),h('p',{text:'Gaste 🪙 RS Coins (de 2.500 a 100.000) ou as raras 💎 Gemas em itens do seu perfil.'})),
+h('section',{class:'sec'},profileCard(S.uid||'',true)),
+h('div',{class:'stats'},h('div',{class:'stat'},h('b',{text:S.isOwner?'∞':fmt(S.wallet.coins)}),h('span',{text:'🪙 moedas'})),h('div',{class:'stat'},h('b',{text:S.isOwner?'∞':fmt(S.wallet.gems)}),h('span',{text:'💎 gemas raras'}))),
+h('p',{class:'note',style:'margin-top:14px',text:'Como ganhar: 🪙 enquanto você fica online (mais rápido enquanto joga), em missões e na recompensa diária. 💎 chegam bem devagar: 1 a cada 30 min online (15 min jogando), em algumas missões e no dia 7 da sequência.'}),
+h('section',{class:'sec'},chips),secs,
+h('p',{class:'note',style:'margin-top:22px',text:S.isOwner?'Você é o dono: moedas e gemas infinitas e tudo liberado.':'Dica: jogue e cumpra missões para juntar mais rápido.'}));}
+var VIEWS={config:viewConfig,inicio:viewInicio,jogos:viewJogos,videos:viewVideos,perfil:viewPerfil,loja:viewLoja,recompensas:viewRecompensas};
+function viewGate(){
+return h('div',{class:'wrap'},h('section',{class:'hero'},h('div',{class:'panel'},h('h1',null,'Entre para ',h('em',{text:'jogar.'})),
+h('p',{text:'O rsgames é só para quem está com a conta logada. Entre com sua conta (pode ser a do Google) para ver jogos e vídeos, postar, ganhar moedas e ter seu perfil.'}),
+h('div',{class:'row'},h('button',{class:'btn primary',type:'button',onclick:function(){location.reload();}},'Já entrei, recarregar')))));}
+function render(){
+var ae=document.activeElement,keepQ=!!(ae&&ae.id==='q'),pos=keepQ?ae.selectionStart:0;
+renderChrome();document.getElementById('view').replaceChildren(VIEWS[S.route]());
+if(keepQ){var q=document.getElementById('q');if(q){q.focus();try{q.setSelectionRange(pos,pos);}catch(e){}}}}
+
+/* sobreposições */
+var seqTimer=0;
+function closeOverlay(){clearTimeout(seqTimer);document.getElementById('ov').replaceChildren();if(S.lastFocus&&S.lastFocus.focus){try{S.lastFocus.focus();}catch(e){}}S.lastFocus=null;}
+function showOverlay(modal,backdrop){
+document.getElementById('ov').replaceChildren();S.lastFocus=document.activeElement;
+var ov=h('div',{class:'overlay'},modal);
+if(backdrop)ov.addEventListener('pointerdown',function(e){if(e.target===ov)closeOverlay();});
+document.getElementById('ov').append(ov);}
+window.addEventListener('keydown',function(e){if(e.key==='Escape'&&document.getElementById('ov').firstChild)closeOverlay();});
+/* assistir: toca início, meio e fim em sequência (vídeos e fotos) */
+function watch(p){
+opened(p.id);trackView(p);
+var seq=[];PARTS.forEach(function(pt){((p.parts||{})[pt[0]]||[]).forEach(function(it,i){seq.push({lab:pt[1]+' '+(i+1),it:it});});});
+if(!seq.length&&p.url)seq.push({lab:'Vídeo',it:{u:p.url}});
+var i=0,box=h('div'),list=h('div',{class:'seqlist'});
+function show(n){clearTimeout(seqTimer);i=n;var s=seq[i];box.replaceChildren();
+if(s.it.a&&s.it.t==='i'){box.append(h('img',{class:'pic',src:'/_blob/'+s.it.a,alt:s.lab}));if(i<seq.length-1)seqTimer=setTimeout(function(){show(i+1);},5000);}
+else if(s.it.a){var v=h('video',{src:'/_blob/'+s.it.a,controls:true,autoplay:true,playsinline:true});v.addEventListener('ended',function(){if(i<seq.length-1)show(i+1);});box.append(v);}
+else{var l=safeUrl(s.it.u),pl=platformOf(l);box.append(l?h('a',{class:'btn primary',href:l,target:'_blank',rel:'noopener noreferrer'},'Abrir '+(pl?'no '+pl.name:'o vídeo')+' em nova aba'):h('p',{class:'note',text:'Link inválido.'}));}
+list.replaceChildren();seq.forEach(function(x,k){list.append(h('button',{class:'fchip',type:'button','aria-pressed':k===i?'true':'false',onclick:function(){show(k);}},x.lab));});}
+var close=h('button',{class:'icon-btn',type:'button','aria-label':'Fechar',onclick:closeOverlay,text:'×'});
+var modal=h('div',{class:'modal wide',role:'dialog','aria-modal':'true','aria-label':p.title},h('div',{class:'modal-head'},h('h2',{text:p.title}),close),box,seq.length>1?list:null,p.desc?h('p',{class:'desc',text:p.desc}):null);
+if(!seq.length)box.append(h('p',{class:'note',text:'Este vídeo não tem partes.'}));else show(0);
+showOverlay(modal,true);close.focus();}
+
+/* jogar jogo colado como código, dentro do próprio site */
+function loadRaw(p){var a=[],i;for(i=0;i<p.codeN;i++)a.push(S.db.collection('codes').doc(p.id+'_'+i).get());
+return Promise.all(a).then(function(r){return r.map(function(x){if(!x.exists)throw new Error('Parte do jogo não encontrada');return x.data().data||'';}).join('');});}
+function getCode(p){if(S.cc[p.id])return Promise.resolve(S.cc[p.id]);
+var pr=(p.codeN&&!p.code)?loadRaw(p):Promise.resolve(p.code||'');
+return pr.then(function(raw){return p.enc?decCode(raw,p.id):raw;}).then(function(t){S.cc[p.id]=t;return t;});}
+function playGame(p){if(p.enc||(p.codeN&&!p.code)){toast('Carregando o jogo…');getCode(p).then(function(c){playGame(Object.assign({},p,{code:c,codeN:0,enc:0}));}).catch(function(e){playGameErr(e);});return;}try{playGame2(p);}catch(err){playGameErr(err);}}
+function playGameErr(err){var old=document.getElementById('errp');if(old)old.remove();var box=h('div',{id:'errp',class:'note',style:'position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:70;background:var(--surface);overflow-wrap:anywhere'},h('b',{text:'Erro ao abrir o jogo'}),h('p',{style:'margin:6px 0',text:String((err&&(err.name+': '+err.message))||err)}),h('button',{class:'btn sm',type:'button',onclick:function(){box.remove();}},'Fechar'));document.body.append(box);}
+function playGame2(p){
+closeOverlay();opened(p.id);trackView(p);
+var fr=h('iframe',{class:'gframe',title:p.title,sandbox:'allow-scripts allow-pointer-lock allow-forms allow-modals'});
+fr.srcdoc=guard(p.code);
+var close=h('button',{class:'icon-btn',type:'button','aria-label':'Fechar',onclick:closeOverlay,text:'×'});
+var rst=h('button',{class:'btn sm',type:'button',onclick:function(){var c=fr.srcdoc;fr.srcdoc='';setTimeout(function(){fr.srcdoc=c;},30);}},'↻ Reiniciar');
+var full=h('button',{class:'btn sm',type:'button',hidden:!(fr.requestFullscreen||fr.webkitRequestFullscreen),onclick:function(){try{(fr.requestFullscreen||fr.webkitRequestFullscreen).call(fr);}catch(e){toast('Tela cheia indisponível aqui.');}}},'⛶ Tela cheia');
+close.addEventListener('click',closeGame);
+var gv=h('div',{id:'gv',class:'wrap',style:'padding-top:12px'},h('div',{class:'modal-head'},h('h2',{text:p.title}),rst,full,close),fr,p.desc?h('p',{class:'desc',text:p.desc}):null);
+var mainEl=document.getElementById('view');closeGame();mainEl.hidden=true;mainEl.parentNode.insertBefore(gv,mainEl);window.scrollTo(0,0);}
+function closeGame(){var g=document.getElementById('gv');if(g)g.remove();var m=document.getElementById('view');if(m)m.hidden=false;}
+
+/* postar */
+function compose(kind){
+if(!S.db){toast('Entre com sua conta para postar.');return;}
+if(S.canWrite===false){toast('Sua conta só pode ver. Peça acesso para postar.');return;}
+var type=kind==='jogo'?'jogo':(KINDS[kind]?kind:'curto'),busy=false,P={inicio:[],meio:[],fim:[]},urls=[];
+var errEl=h('p',{class:'err',role:'alert'}),submit=h('button',{class:'btn primary',type:'submit',text:'Publicar'});
+var gameBox=h('div',null,h('div',{class:'field'},h('label',{for:'pf-code',text:'Código do jogo (HTML)'}),h('textarea',{id:'pf-code',class:'codeta',spellcheck:'false',autocapitalize:'off',autocomplete:'off',placeholder:'Cole aqui o código completo do jogo, começando com <!DOCTYPE html>'}),h('span',{class:'hint',text:'Peça ao Claude para criar o jogo em um único arquivo HTML e cole aqui. Ele roda direto no site, sem sair da página.'})),h('div',{class:'field'},h('label',{for:'pf-url',text:'Ou link do jogo (opcional)'}),h('input',{id:'pf-url',type:'url',placeholder:'https://…',autocomplete:'off'}),h('span',{class:'hint',text:'Só é usado se você não colar o código. Abre em nova aba.'})));
+var kindHint=h('p',{class:'hint',style:'margin:0 0 10px'}),vidBox=h('div');
+function partBox(pt){
+var list=h('div'),url=h('input',{type:'url',placeholder:'Ou cole um link (YouTube, TikTok…)','aria-label':'Link de '+pt[1]}),capture=null;
+function paint(){list.replaceChildren();P[pt[0]].forEach(function(x,k){
+var prev=null;
+if(x.file&&isImg(x.file)){var u=URL.createObjectURL(x.file);urls.push(u);prev=h('img',{src:u,alt:''});}
+list.append(h('div',{class:'pit'},h('span',{class:'pv'},prev,h('span',{text:(k+1)+'. '+(x.file?((isImg(x.file)?'📷 ':'🎥 ')+(x.file.name||'gravação')):x.u)})),h('button',{class:'btn sm danger',type:'button',onclick:function(){P[pt[0]].splice(k,1);paint();}},'Tirar')));});}
+function mk(accept,cap,multi,label,aria){
+var fi=h('input',{type:'file',accept:accept,capture:cap||null,multiple:multi||null,'aria-label':aria});
+fi.addEventListener('change',function(){Array.prototype.forEach.call(fi.files,function(f){P[pt[0]].push({file:f});});fi.value='';paint();});
+return h('span',null,fi,h('button',{class:'btn sm',type:'button',onclick:function(){fi.click();}},label));}
+if(S.assets)capture=h('div',{class:'capture'},
+mk('video/*','environment',false,'🎥 Gravar vídeo','Gravar vídeo em '+pt[1]),
+mk('image/*','environment',false,'📷 Tirar foto','Tirar foto em '+pt[1]),
+mk('video/*,image/*',null,true,'🖼️ Galeria','Escolher da galeria em '+pt[1]));
+return h('div',{class:'part'},h('h4',{text:pt[1]}),list,capture,h('div',{class:'prow'},url,h('button',{class:'btn sm',type:'button',onclick:function(){var u=safeUrl(url.value);if(!u){errEl.textContent='O link precisa começar com https://';return;}errEl.textContent='';P[pt[0]].push({u:u});url.value='';paint();}},'Adicionar')));}
+PARTS.forEach(function(pt){vidBox.append(partBox(pt));});
+var coverBox=S.assets?h('div',{class:'field'},h('label',{for:'pf-cover',text:'Capa (opcional)'}),h('input',{id:'pf-cover',type:'file',accept:'image/png,image/jpeg,image/webp,image/gif'})):null;
+function sync(){testBtn.hidden=type!=='jogo';if(type!=='jogo')prevBox.hidden=true;gameBox.hidden=type!=='jogo';vidBox.hidden=type==='jogo';kindHint.hidden=type==='jogo';kindHint.textContent=(KHINT[type]||'')+'. Grave na hora, tire fotos ou escolha da galeria. Tudo toca em ordem, do início ao fim.';}
+function radio(v,label){var i=h('input',{type:'radio',name:'ptype',value:v,onchange:function(){type=v;sync();}});if(v===type)i.checked=true;return h('label',null,i,h('span',{text:label}));}
+var prevBox=h('div',{class:'field',hidden:true});
+var testBtn=h('button',{class:'btn',type:'button',onclick:function(){var c=document.getElementById('pf-code').value.trim();if(!c){errEl.textContent='Cole o código do jogo para testar.';return;}errEl.textContent='';var fr=h('iframe',{class:'gframe',title:'Teste do jogo',sandbox:'allow-scripts allow-pointer-lock allow-forms allow-modals'});fr.srcdoc=guard(c);prevBox.hidden=false;prevBox.replaceChildren(h('label',{text:'Teste (não publicado ainda)'}),fr);prevBox.scrollIntoView({block:'nearest'});}},'▶ Testar');
+var form=h('form',{novalidate:true},
+h('fieldset',{class:'seg'},h('legend',{style:'position:absolute;opacity:0;pointer-events:none;width:1px;height:1px;overflow:hidden',text:'Tipo de publicação'}),radio('jogo','Jogo'),radio('curto','Curto'),radio('medio','Médio'),radio('longo','Longo')),
+h('div',{class:'field'},h('label',{for:'pf-title',text:'Título'}),h('input',{id:'pf-title',type:'text',maxlength:'60',autocomplete:'off'})),
+h('div',{class:'field'},h('label',{for:'pf-desc',text:'Descrição (opcional)'}),h('textarea',{id:'pf-desc',maxlength:'240'})),
+gameBox,prevBox,kindHint,vidBox,coverBox,errEl,
+h('div',{style:'display:flex;gap:8px;justify-content:flex-end'},h('button',{class:'btn',type:'button',onclick:closeOverlay,text:'Cancelar'}),testBtn,submit));
+sync();
+form.addEventListener('submit',async function(e){
+e.preventDefault();if(busy)return;errEl.textContent='';
+var title=form.querySelector('#pf-title').value.trim(),desc=form.querySelector('#pf-desc').value.trim(),url='',code='',total=0,bad=false,cover=null;
+if(!title){errEl.textContent='Dê um título para a publicação.';return;}
+if(type==='jogo'){code=form.querySelector('#pf-code').value.trim();url=safeUrl(form.querySelector('#pf-url').value);if(!code&&!url){errEl.textContent='Cole o código do jogo ou o link completo, começando com https://';return;}if(code.length>700000){errEl.textContent='O código é grande demais (máximo de 700 mil caracteres).';return;}}
+else{PARTS.forEach(function(pt){P[pt[0]].forEach(function(x){total++;if(x.file&&(!fileOk(x.file)||x.file.size>20*1024*1024))bad=true;});});
+if(bad){errEl.textContent='Use vídeo (MP4, WebM ou gravação do celular) ou foto, de até 20 MB cada. Grave vídeos curtos.';return;}
+if(total<1){errEl.textContent='Adicione pelo menos um vídeo ou foto em alguma das partes.';return;}}
+if(S.assets){cover=form.querySelector('#pf-cover').files[0]||null;if(cover&&(ITYPES.indexOf(cover.type)<0||cover.size>20*1024*1024)){errEl.textContent='A capa precisa ser imagem de até 20 MB.';return;}}
+if(Date.now()-S.lastPost<20000){errEl.textContent='Espere alguns segundos antes de postar de novo.';return;}
+busy=true;submit.disabled=true;submit.textContent='Publicando…';
+try{
+var parts={inicio:[],meio:[],fim:[]},coverId='';
+if(type!=='jogo'){for(var k=0;k<PARTS.length;k++){var key=PARTS[k][0];for(var j=0;j<P[key].length;j++){var x=P[key][j];
+if(x.file){submit.textContent='Enviando '+(isImg(x.file)?'foto…':'vídeo…');var up=await S.assets.upload(x.file,{type:x.file.type||'video/mp4'});parts[key].push(isImg(x.file)?{a:up.id,t:'i'}:{a:up.id});}else parts[key].push({u:x.u});}}}
+if(cover)coverId=(await S.assets.upload(cover,{type:cover.type})).id;
+var pid='p'+Date.now().toString(36)+Math.random().toString(36).slice(2,8),codeN=0,inline=code,enc=0;
+if(code&&CRY){submit.textContent='Protegendo o código…';inline=await encCode(code,pid);enc=1;}
+if(new Blob([inline]).size>200000){var CHK=enc?150000:50000,i2=0,whole=inline;inline='';while(i2<whole.length){submit.textContent='Enviando código…';await S.db.collection('codes').doc(pid+'_'+codeN).set({postId:pid,i:codeN,data:whole.slice(i2,i2+CHK)});codeN++;i2+=CHK;}}
+await S.db.collection('posts').doc(pid).set({type:type==='jogo'?'game':'video',kind:type==='jogo'?'':type,title:title,desc:desc,url:url,code:inline,codeN:codeN,enc:enc,parts:parts,coverId:coverId,authorId:S.uid||'',authorName:String(S.names[S.uid]||'').slice(0,40),createdAt:Date.now()});
+urls.forEach(function(u){URL.revokeObjectURL(u);});S.lastPost=Date.now();
+mutate(function(w){w.m.posted+=1;});closeOverlay();toast('Publicado! Confira a missão de hoje em Recompensas.');
+}catch(err){var c=err&&err.code,msg='Não foi possível publicar agora. Tente de novo.';
+if(c==='too_large')msg='Um arquivo é grande demais (máximo de 20 MB).';else if(c==='quota_or_state')msg='O espaço de armazenamento do site acabou.';else if(c==='invalid_argument')msg='Sua conta não tem permissão para postar ou o tipo do arquivo não é aceito.';
+errEl.textContent=msg;busy=false;submit.disabled=false;submit.textContent='Publicar';}});
+var close=h('button',{class:'icon-btn',type:'button','aria-label':'Fechar',onclick:closeOverlay,text:'×'});
+showOverlay(h('div',{class:'modal',role:'dialog','aria-modal':'true','aria-label':'Nova publicação'},h('div',{class:'modal-head'},h('h2',{text:'Nova publicação'}),close),form),true);
+form.querySelector('#pf-title').focus();}
+
+/* dados online */
+async function resolveNames(){
+if(!S.user)return;
+try{var ids={};S.posts.forEach(function(p){if(p.authorId)ids[p.authorId]=1;});Object.keys(S.profiles).forEach(function(i){ids[i]=1;});if(S.uid)ids[S.uid]=1;
+var list=Object.keys(ids);if(!list.length)return;var ps=await S.user.profiles(list),ch=false;
+list.forEach(function(id){var n=(ps[id]&&ps[id].name)||'';if(S.names[id]!==n){S.names[id]=n;ch=true;}});if(ch)render();}catch(e){}}
+function subscribe(){
+var slow=setTimeout(function(){if(!S.postsReady){S.postsErr='lento';render();}},10000);
+S.db.collection('posts').orderBy('createdAt','desc').limit(100).onSnapshot(function(snap){
+clearTimeout(slow);S.postsReady=true;S.postsErr='';
+S.posts=snap.docs.map(function(d){return Object.assign({id:d.id},d.data());}).filter(function(p){return (p.type==='game'||p.type==='video')&&typeof p.title==='string';});
+S.posts.forEach(function(p){if(p.authorName&&p.authorId&&!S.pn[p.authorId])S.pn[p.authorId]=String(p.authorName).slice(0,40);});
+render();resolveNames();},function(err){clearTimeout(slow);S.postsReady=true;S.postsErr=(err&&err.code)||'erro';render();});
+S.db.collection('likes').onSnapshot(function(snap){var m=new Map();
+snap.docs.forEach(function(d){var x=d.data();if(!x||!x.postId||!x.uid)return;if(!m.has(x.postId))m.set(x.postId,new Set());m.get(x.postId).add(x.uid);});S.likes=m;render();},function(){});
+S.db.collection('views').onSnapshot(function(snap){var m=new Map();snap.docs.forEach(function(d){var x=d.data();if(!x||!x.postId||!x.uid)return;if(!m.has(x.postId))m.set(x.postId,new Set());m.get(x.postId).add(x.uid);});S.views=m;render();},function(){});
+S.db.collection('profiles').onSnapshot(function(snap){var m={};snap.docs.forEach(function(d){m[d.id]=d.data();});S.profiles=m;render();resolveNames();},function(){});}
+function use(name){try{return (window.claude&&window.claude.use)?Promise.resolve(window.claude.use(name)).catch(function(){return null;}):Promise.resolve(null);}catch(e){return Promise.resolve(null);}}
+async function init(){
+var r=await Promise.all([use('user'),use('db'),use('assets')]);S.user=r[0];S.db=r[1];S.assets=r[2];
+try{if(S.user){S.uid=await S.user.id();S.isAdmin=await S.user.canEdit();S.isOwner=await S.user.isOwner();S.canWrite=await S.user.can('data.write');}}catch(e){}
+var local=null;try{local=JSON.parse(localStorage.getItem(LS+':'+(S.uid||''))||'null');}catch(e){}
+S.wallet=normalize(local);
+if(S.db&&S.uid){try{var snap=await S.db.doc('data/users/'+S.uid+'/wallet').get();if(snap.exists)S.wallet=checked(snap.data());persist();}catch(e){}}
+S.initDone=true;render();if(S.db)subscribe();hideIntroSoon();}
+function route(){document.body.classList.add('enter');setTimeout(function(){document.body.classList.remove('enter');},800);closeGame();var r=location.hash.replace('#','');S.route=ROUTES.indexOf(r)>=0?r:'inicio';S.q='';S.kf='all';render();window.scrollTo(0,0);}
+window.addEventListener('hashchange',route);
+document.getElementById('btn-post').addEventListener('click',function(){compose(S.route==='jogos'?'jogo':'curto');});
+setInterval(function(){
+if(!S.uid||!S.db||document.visibilityState!=='visible')return;
+var pl=!!document.getElementById('gv'),w=S.wallet,g=0;
+w.coins+=pl?20:10;w.xp+=pl?2:1;w.gsec+=pl?60:30;if(pl)w.m.ps+=30;
+while(w.gsec>=1800){w.gsec-=1800;w.gems+=1;g++;}
+S.wallet=normalize(w);persist();renderChrome();
+if(g)toast('+1 💎 por tempo jogando!');
+if(S.route==='recompensas'||S.route==='loja')render();
+},30000);
+/* música de fundo (original, gerada pelo navegador) e efeitos */
+var M={ctx:null,master:null,sfx:null,next:0,step:0};
+var SD=60/110/4,CH=[{b:110,a:[220,261.63,329.63]},{b:87.31,a:[174.61,220,261.63]},{b:130.81,a:[261.63,329.63,392]},{b:98,a:[196,246.94,293.66]}];
+var PEN=[440,523.25,587.33,659.25,783.99],MEL=[3,-1,1,3,0,-1,1,-1,2,-1,0,2,3,-1,-1,-1,4,-1,3,2,3,-1,1,-1,0,1,2,3,2,-1,-1,-1];
+function ensureCtx(){try{if(!M.ctx){var A=window.AudioContext||window.webkitAudioContext;if(!A)return false;M.ctx=new A();M.master=M.ctx.createGain();M.master.gain.value=0;M.master.connect(M.ctx.destination);M.sfx=M.ctx.createGain();M.sfx.gain.value=.5;M.sfx.connect(M.ctx.destination);}
+if(M.ctx.state==='suspended')M.ctx.resume();return true;}catch(e){return false;}}
+function note(f,t,d,type,v,dest){var c=M.ctx,o=c.createOscillator(),g=c.createGain();o.type=type;o.frequency.value=f;g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(v,t+0.012);g.gain.exponentialRampToValueAtTime(0.0001,t+d);o.connect(g);g.connect(dest||M.master);o.start(t);o.stop(t+d+0.05);}
+function kick(t){var c=M.ctx,o=c.createOscillator(),g=c.createGain();o.frequency.setValueAtTime(130,t);o.frequency.exponentialRampToValueAtTime(42,t+0.13);g.gain.setValueAtTime(0.8,t);g.gain.exponentialRampToValueAtTime(0.0001,t+0.16);o.connect(g);g.connect(M.master);o.start(t);o.stop(t+0.2);}
+function hat(t){var c=M.ctx,n=Math.floor(c.sampleRate*0.04),b=c.createBuffer(1,n,c.sampleRate),a=b.getChannelData(0),i;for(i=0;i<n;i++)a[i]=Math.random()*2-1;
+var s=c.createBufferSource(),g=c.createGain(),f=c.createBiquadFilter();f.type='highpass';f.frequency.value=7000;s.buffer=b;g.gain.setValueAtTime(0.06,t);g.gain.exponentialRampToValueAtTime(0.0001,t+0.04);s.connect(f);f.connect(g);g.connect(M.master);s.start(t);}
+function playStep(st,t){var ch=CH[(st>>4)&3],k=st%16;
+if(k%4===0)kick(t);if(k%4===2)hat(t);
+if(k%8===0)note(ch.b,t,0.34,'triangle',0.55);if(k%8===6)note(ch.b*2,t,0.14,'triangle',0.3);
+if(k%2===0){note(ch.a[[0,1,2,1][(k>>1)%4]]*(k>=8?2:1),t,0.13,'square',0.035);var m=MEL[(st>>1)%32];if(m>=0)note(PEN[m],t,0.24,'sine',0.17);}}
+function musicStart(){if(!ensureCtx())return;if(!M.next||M.next<M.ctx.currentTime)M.next=M.ctx.currentTime+0.1;}
+function sfx(kind){if(!S.cfg||!S.cfg.sfx||!M.ctx||M.ctx.state!=='running')return;var t=M.ctx.currentTime+0.01;
+if(kind==='win')[523.25,659.25,783.99,1046.5].forEach(function(f,i){note(f,t+i*0.085,0.22,'triangle',0.28,M.sfx);});else note(880,t,0.06,'sine',0.12,M.sfx);}
+function musicIcon(){var b=document.getElementById('btn-mus');if(b)b.textContent=S.cfg.music?'🎵':'🔇';}
+function boom(){if(S.cfg&&S.cfg.calm){sfx('win');return;}var cols=['#ff5c92','#a58bff','#4fe0c0','#ffd35e','#3d8bff'],cx=innerWidth/2,cy=innerHeight*0.4,i;
+function one(i){var d=document.createElement('i');d.className='cf';d.style.cssText='left:'+cx+'px;top:'+cy+'px;background:'+cols[i%5];document.body.append(d);var a=Math.random()*Math.PI*2,v=90+Math.random()*150;
+var an=d.animate([{transform:'translate(0,0) rotate(0) scale(1)',opacity:1},{transform:'translate('+Math.cos(a)*v+'px,'+(Math.sin(a)*v+100)+'px) rotate('+Math.round(Math.random()*540)+'deg) scale(.6)',opacity:0}],{duration:900+Math.random()*500,easing:'cubic-bezier(.2,.7,.3,1)'});an.onfinish=function(){d.remove();};}
+for(i=0;i<28;i++)one(i);sfx('win');}
+setInterval(function(){if(!M.ctx)return;var base=(S.cfg.music?S.cfg.vol/100*0.45:0)*(document.getElementById('gv')?0.3:1);M.master.gain.setTargetAtTime(base,M.ctx.currentTime,0.15);
+if(!S.cfg.music||M.ctx.state!=='running')return;
+if(M.next<M.ctx.currentTime-0.5)M.next=M.ctx.currentTime+0.05;
+while(M.next<M.ctx.currentTime+0.2){playStep(M.step,M.next);M.next+=SD;M.step=(M.step+1)%64;}},60);
+function unlock(){if(ensureCtx()&&S.cfg.music)musicStart();}
+['pointerdown','touchend','keydown'].forEach(function(ev){document.addEventListener(ev,unlock,{passive:true});});
+document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('.btn,.fchip,.tabs a,.icon-btn'))sfx('tap');},true);
+document.addEventListener('visibilitychange',function(){if(!M.ctx)return;if(document.hidden)M.ctx.suspend();else M.ctx.resume();});
+document.getElementById('btn-mus').addEventListener('click',function(){S.cfg.music=!S.cfg.music;saveCfg();if(S.cfg.music)unlock();});
+
+var T0=Date.now();
+(function(){var m=document.querySelector('.brand .mark'),h0=document.getElementById('introMark');if(m&&h0)h0.replaceWith(m.cloneNode(true));
+var el=document.getElementById('intro');if(el.querySelector('svg'))el.querySelector('svg').setAttribute('class','mark');})();
+function hideIntro(){var el=document.getElementById('intro');if(!el||el.classList.contains('out'))return;el.classList.add('out');setTimeout(function(){el.remove();},800);}
+function hideIntroSoon(){setTimeout(hideIntro,Math.max(0,1800-(Date.now()-T0)));}
+document.getElementById('intro').addEventListener('click',hideIntro);setTimeout(hideIntro,7000);
+applyCfg();route();init();
+})();
